@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Features to Add
+
+### Navigation
+
+- [ ] Main Page
+- [ ] Tabs to switch between components
+- [ ] Forms to generate components
+- [ ] Display area to show component in it's context
+
+### Components
+
+- [ ] Badges
+- [ ] Banners
+- [ ] Cards
+- [ ] Testimonials
+- [ ] Tooltips
+- [ ] Toast Popups
+
 ## Available Scripts
 
 In the project directory, you can run:
