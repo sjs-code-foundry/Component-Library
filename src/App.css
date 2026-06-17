@@ -34,6 +34,10 @@ body {
     text-align: center;
 }
 
+/* ========
+*   Header
+*  ======== */
+
 header {
     display: flex;
     flex-direction: row;
@@ -42,6 +46,23 @@ header {
     gap: 0.2em;
 
     border-bottom: 1px solid black;
+}
+
+header > button {
+    width: 100%;
+    height: 3.5em;
+
+    background-color: inherit;
+
+    border: none;
+}
+
+header > button:hover {
+    color: yellow;
+}
+
+header > button:active {
+    color: red;
 }
 
 /* ============
