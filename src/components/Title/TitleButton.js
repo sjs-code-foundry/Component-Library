@@ -1,6 +1,8 @@
-export default function TitleButton({ onClick, children }) {
+import { clsx } from "clsx";
+
+export default function TitleButton({ className, onClick, children }) {
   return (
-    <button className="title-btn" onClick={onClick}>
+    <button className={clsx("title-btn", className)} onClick={onClick}>
       {children}
     </button>
   );

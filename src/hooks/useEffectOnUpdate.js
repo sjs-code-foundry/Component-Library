@@ -1,7 +1,9 @@
 import { useRef, useEffect } from "react";
 
-export default function useEffectOnUpdate(effectFunc, depsArr) {
-  const firstRender = useRef(true);
+export default function useEffectOnUpdate(effectFunc, runOnStart, depsArr) {
+  const refValue = runOnStart ? false : true;
+
+  const firstRender = useRef(refValue);
 
   useEffect(() => {
     if (firstRender.current) {

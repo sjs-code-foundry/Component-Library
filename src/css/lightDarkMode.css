@@ -2,10 +2,54 @@
 *   Utility Classes
 *  ==================== */
 
-.light {
-    background-color: white;
+.light-bg {
+    background-color: #ffffff;
 }
 
-.dark {
-    background-color: black;
+.light-text {
+    color: #434b57;
 }
+
+.light-border-bottom {
+    border-bottom: 1px solid #434b57;
+}
+
+.light-accent {
+    background-color: #7953f5;
+    color: #ffffff;
+}
+
+.dark-bg {
+    background-color: #0d1b2a;
+}
+
+.dark-text {
+    color: #e0e1dd;
+}
+
+.dark-border-bottom {
+    border-bottom: 1px solid #e0e1dd;
+}
+
+.dark-accent {
+    background-color: #415a77;
+    color: #e0e1dd;
+}
+
+/* Light Mode:
+*  https://coolors.co/palette/434b57-7953f5-d8d8d8-f7f7f8-ffffff (in reverse)
+*  #ffffff
+*  #f7f7f8
+*  #d8d8d8
+*  #7953f5
+*  #434b57
+*  */
+
+/* Dark Mode:
+*  https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd
+*  #0d1b2a
+*  #1b263b
+*  #415a77
+*  #778da9
+*  #e0e1dd
+*  */
