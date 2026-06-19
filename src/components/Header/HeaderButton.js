@@ -1,7 +1,7 @@
-export default function HeaderButton({ children }) {
-  function handleClick() {
-    console.log("Button clicked.");
-  }
+export default function HeaderButton({ onClick, children }) {
+  // function handleClick() {
+  //   console.log("Button clicked.");
+  // }
 
-  return <button onClick={handleClick}>{children}</button>;
+  return <button onClick={onClick}>{children}</button>;
 }

@@ -8,12 +8,28 @@ function App() {
   return (
     <div className="App">
       <Header>
-        <Header.Button>Badges</Header.Button>
-        <Header.Button>Banners</Header.Button>
-        <Header.Button>Cards</Header.Button>
-        <Header.Button>Testimonials</Header.Button>
-        <Header.Button>Tooltips</Header.Button>
-        <Header.Button>Toast Popups</Header.Button>
+        <Header.Button onClick={() => console.log("Badges button clicked.")}>
+          Badges
+        </Header.Button>
+        <Header.Button onClick={() => console.log("Banners button clicked.")}>
+          Banners
+        </Header.Button>
+        <Header.Button onClick={() => console.log("Cards button clicked.")}>
+          Cards
+        </Header.Button>
+        <Header.Button
+          onClick={() => console.log("Testimonials button clicked.")}
+        >
+          Testimonials
+        </Header.Button>
+        <Header.Button onClick={() => console.log("Tooltips button clicked.")}>
+          Tooltips
+        </Header.Button>
+        <Header.Button
+          onClick={() => console.log("Toast Popups button clicked.")}
+        >
+          Toast Popups
+        </Header.Button>
       </Header>
       <main>
         <section className="entry-form">
@@ -28,9 +44,3 @@ function App() {
 }
 
 export default App;
-
-// <a href="#">This is a link</a>
-// <p> | </p>
-// <a href="#">This is a second link</a>
-// <p> | </p>
-// <a href="#">This is a third link</a>
