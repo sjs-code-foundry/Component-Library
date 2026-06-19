@@ -58,7 +58,7 @@ header > button {
 }
 
 header > button:hover {
-    color: yellow;
+    box-shadow: 0 0 1px 1px black;
 }
 
 header > button:active {
