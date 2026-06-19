@@ -3,6 +3,7 @@ import "./App.css";
 import { createContext, useRef } from "react";
 import useToggle from "./hooks/useToggle";
 
+import Title from "./components/Title/index";
 import Header from "./components/Header/index";
 
 const LightDarkContext = createContext();
@@ -22,7 +23,10 @@ function App() {
 
   return (
     <LightDarkContext.Provider value={{ dark, toggleDark }}>
-      <button onClick={toggleDark}>Toggle Dark Mode</button>
+      <Title>
+        <h1>Component Library</h1>
+        <Title.Button onClick={toggleDark}>Toggle Dark Mode</Title.Button>
+      </Title>
       <div className="App" ref={appRef}>
         <Header>
           <Header.Button onClick={() => console.log("Badges button clicked.")}>
