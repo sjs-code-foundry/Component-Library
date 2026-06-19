@@ -1,12 +1,19 @@
 import "./App.css";
 
+import { useRef } from "react";
+
 import Header from "./components/Header/index";
 
 function App() {
   document.title = "Component Library";
 
+  const appRef = useRef(null);
+  // const bodyRef = appRef.current.parentNode.parentNode;
+
+  // bodyRef only works when app is initialised
+
   return (
-    <div className="App">
+    <div className="App" ref={appRef}>
       <Header>
         <Header.Button onClick={() => console.log("Badges button clicked.")}>
           Badges
