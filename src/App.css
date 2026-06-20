@@ -53,6 +53,10 @@ div.title {
     height: 5em;
 }
 
+.light-dark-btn-content {
+    font-size: 3rem;
+}
+
 /* ========
 *   Header
 *  ======== */

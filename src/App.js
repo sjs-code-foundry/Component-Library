@@ -6,6 +6,9 @@ import useToggle from "./hooks/useToggle";
 import Title from "./components/Title/index";
 import Header from "./components/Header/index";
 
+import { RiLightbulbFlashLine } from "react-icons/ri";
+// Insert MIT licence text somewhere in this app
+
 const LightDarkContext = createContext();
 export { LightDarkContext };
 // Do we even need context?
@@ -36,7 +39,7 @@ function App() {
           className={dark ? "dark-accent" : "light-accent"}
           onClick={toggleDark}
         >
-          Toggle Dark Mode
+          <RiLightbulbFlashLine className="light-dark-btn-content" />
         </Title.Button>
       </Title>
       <div className="App" ref={appRef}>
