@@ -53,8 +53,17 @@ div.title {
     height: 5em;
 }
 
-.light-dark-btn-content {
+.title-btn {
     font-size: 3rem;
+    padding: 0.2em;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.light-dark-btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ========
