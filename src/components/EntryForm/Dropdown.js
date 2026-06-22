@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+import clsx from "clsx";
+
+import { LightDarkContext } from "../../App";
 
 export default function Dropdown(props) {
   const [selected, setSelected] = useState("");
+
+  const { dark } = useContext(LightDarkContext);
 
   function handleChange(e) {
     const value = e.target.value;
@@ -14,6 +20,7 @@ export default function Dropdown(props) {
       <select
         name={props.name}
         id={props.name}
+        className={clsx("select", `${dark ? "dark" : "light"}-accent`)}
         value={selected}
         onChange={handleChange}
       >

@@ -100,11 +100,46 @@ header > button:active {
 *   Sections
 *  ============ */
 
+/* --- Entry Forms --- */
+
 section.entry-form {
     margin: 1em auto;
 
     border: 1px solid green;
 }
+
+section.entry-form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 2em 0;
+}
+
+section.entry-form > form > label {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+}
+
+.select {
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+}
+
+section.entry-form > form > button {
+    margin-top: 2em;
+    padding: 0.5em 1em;
+
+    font-size: 110%;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 1em;
+}
+
+/* --- Rendering Window --- */
 
 section.render-window {
     display: flex;
