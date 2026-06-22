@@ -25,7 +25,7 @@ function App() {
   const [dark, toggleDark] = useToggle(false, true, () => {});
   // Perhaps implement localStorage to remember dark mode setting?
   const [formSubmission, setFormSubmission] = useState(null);
-  console.log(formSubmission);
+  // console.log(formSubmission);
 
   const appRef = useRef(null);
 
@@ -36,8 +36,6 @@ function App() {
       ? (bodyRef.classList = "dark-bg dark-text")
       : (bodyRef.classList = "light-bg light-text");
   }, [dark]);
-
-  // console.log(formObj.badges);
 
   return (
     <LightDarkContext.Provider value={{ dark, toggleDark }}>
@@ -96,7 +94,7 @@ function App() {
         </Header>
         <main>
           <section className="entry-form">
-            <Form onSubmit={setFormSubmission}>
+            <Form onSubmission={setFormSubmission}>
               <Form.Dropdown
                 labelText="Badge Color: "
                 name="badge-color"
