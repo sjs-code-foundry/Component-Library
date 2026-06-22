@@ -27,7 +27,7 @@ export default function Radios(props) {
 
   return (
     <div className="radio">
-      <p>{props.labelText}</p>
+      <p className="radio-title">{props.labelText}</p>
       <div className="radio-list">{optionsElements}</div>
     </div>
   );

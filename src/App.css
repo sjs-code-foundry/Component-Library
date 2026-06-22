@@ -120,12 +120,21 @@ section.entry-form > form {
 section.entry-form > form > label {
     margin-top: 1em;
     margin-bottom: 0.4em;
+
+    font-size: 110%;
 }
 
 .select {
     padding: 1em;
     border: none;
     border-radius: 1em;
+}
+
+.radio-title {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+
+    font-size: 110%;
 }
 
 .radio-list {
