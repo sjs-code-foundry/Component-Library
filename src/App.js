@@ -1,15 +1,19 @@
 import "./App.css";
 
-import { createContext, useRef, useEffect } from "react";
+import { createContext, useState, useRef, useEffect } from "react";
 import useToggle from "./hooks/useToggle";
 
 import clsx from "clsx";
 
 import Title from "./components/Title/index";
 import Header from "./components/Header/index";
+import Form from "./components/EntryForm/index";
+import Badge from "./components/ComponentElements/Badge";
 
 import { RiLightbulbFlashLine } from "react-icons/ri";
 // Insert MIT licence text somewhere in this app
+
+import { formObj } from "./helpers/constants";
 
 const LightDarkContext = createContext();
 export { LightDarkContext };
@@ -18,10 +22,10 @@ export { LightDarkContext };
 function App() {
   document.title = "Component Library";
 
-  const [dark, toggleDark] = useToggle(false, true, () =>
-    console.log(`Dark Mode: ${dark}`),
-  );
+  const [dark, toggleDark] = useToggle(false, true, () => {});
   // Perhaps implement localStorage to remember dark mode setting?
+  const [formSubmission, setFormSubmission] = useState(null);
+  console.log(formSubmission);
 
   const appRef = useRef(null);
 
@@ -32,6 +36,8 @@ function App() {
       ? (bodyRef.classList = "dark-bg dark-text")
       : (bodyRef.classList = "light-bg light-text");
   }, [dark]);
+
+  // console.log(formObj.badges);
 
   return (
     <LightDarkContext.Provider value={{ dark, toggleDark }}>
@@ -90,10 +96,21 @@ function App() {
         </Header>
         <main>
           <section className="entry-form">
-            <p>This is where the entry form will go.</p>
+            <Form onSubmit={setFormSubmission}>
+              <Form.Dropdown
+                labelText="Badge Color: "
+                name="badge-color"
+                options={formObj.badges.colors}
+              />
+              <Form.Dropdown
+                labelText="Badge Shape: "
+                name="badge-shape"
+                options={formObj.badges.shapes}
+              />
+            </Form>
           </section>
           <section className="render-window">
-            <p>This is where the rendering window will go.</p>
+            <Badge text="Badge" style={formSubmission} />
           </section>
         </main>
       </div>

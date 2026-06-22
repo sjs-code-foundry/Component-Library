@@ -1,0 +1,8 @@
+.badge {
+    padding: 2px 12px;
+    border: none;
+}
+
+.badge > p {
+    margin: 0;
+}
