@@ -128,6 +128,18 @@ section.entry-form > form > label {
     border-radius: 1em;
 }
 
+.radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 section.entry-form > form > button {
     margin-top: 2em;
     padding: 0.5em 1em;

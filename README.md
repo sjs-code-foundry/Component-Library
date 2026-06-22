@@ -6,10 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Navigation
 
-- [ ] Main Page
+- [x] Main Page
 - [ ] Tabs to switch between components
-- [ ] Forms to generate components
-- [ ] Display area to show component in it's context
+- [x] Forms to generate components
+- [x] Display area to show component in it's context
 
 ### Components
 

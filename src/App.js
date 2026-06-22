@@ -14,6 +14,7 @@ import { RiLightbulbFlashLine } from "react-icons/ri";
 // Insert MIT licence text somewhere in this app
 
 import { formObj } from "./helpers/constants";
+// Implement a button that lets all possible combinations be displayed?
 
 const LightDarkContext = createContext();
 export { LightDarkContext };
@@ -100,7 +101,7 @@ function App() {
                 name="badge-color"
                 options={formObj.badges.colors}
               />
-              <Form.Dropdown
+              <Form.Radios
                 labelText="Badge Shape: "
                 name="badge-shape"
                 options={formObj.badges.shapes}
