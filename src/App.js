@@ -3,6 +3,8 @@ import "./App.css";
 import { createContext, useRef, useEffect } from "react";
 import useToggle from "./hooks/useToggle";
 
+import clsx from "clsx";
+
 import Title from "./components/Title/index";
 import Header from "./components/Header/index";
 
@@ -39,7 +41,12 @@ function App() {
           className={dark ? "dark-accent" : "light-accent"}
           onClick={toggleDark}
         >
-          <RiLightbulbFlashLine className="light-dark-btn-content" />
+          <RiLightbulbFlashLine
+            className={clsx(
+              "light-dark-btn-content",
+              `${dark ? "dark" : "light"}-btn-content`,
+            )}
+          />
         </Title.Button>
       </Title>
       <div className="App" ref={appRef}>

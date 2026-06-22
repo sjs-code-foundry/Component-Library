@@ -19,6 +19,10 @@
     color: #ffffff;
 }
 
+.light-btn-content {
+    color: black;
+}
+
 .dark-bg {
     background-color: #0d1b2a;
 }
@@ -34,6 +38,10 @@
 .dark-accent {
     background-color: #415a77;
     color: #e0e1dd;
+}
+
+.dark-btn-content {
+    color: yellow;
 }
 
 /* Light Mode:
