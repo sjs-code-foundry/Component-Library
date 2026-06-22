@@ -44,7 +44,7 @@ function App() {
           <RiLightbulbFlashLine
             className={clsx(
               "light-dark-btn-content",
-              `${dark ? "dark" : "light"}-btn-content`,
+              `${dark ? "dark" : "light"}-bulb-icon`,
             )}
           />
         </Title.Button>
