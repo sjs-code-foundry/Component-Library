@@ -7,13 +7,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Navigation
 
 - [x] Main Page
-- [ ] Tabs to switch between components
+- [x] Tabs to switch between components
 - [x] Forms to generate components
 - [x] Display area to show component in it's context
 
 ### Components
 
-- [ ] Badges
+- [x] Badges
 - [ ] Banners
 - [ ] Cards
 - [ ] Testimonials
