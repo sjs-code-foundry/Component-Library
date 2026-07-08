@@ -7,14 +7,10 @@ import clsx from "clsx";
 
 import Title from "./components/Title/index";
 import Header from "./components/Header/index";
-import Form from "./components/EntryForm/index";
-import Badge from "./components/ComponentElements/Badge";
+import Main from "./components/Main/Main";
 
 import { RiLightbulbFlashLine } from "react-icons/ri";
 // Insert MIT licence text somewhere in this app
-
-import { formObj } from "./helpers/constants";
-// Implement a button that lets all possible combinations be displayed?
 
 const LightDarkContext = createContext();
 export { LightDarkContext };
@@ -25,7 +21,6 @@ function App() {
   const [dark, toggleDark] = useToggle(false, true, () => {});
   // Perhaps implement localStorage to remember dark mode setting?
   const [formSubmission, setFormSubmission] = useState(null);
-  // console.log(formSubmission);
 
   const appRef = useRef(null);
 
@@ -92,28 +87,31 @@ function App() {
             Toast Popups
           </Header.Button>
         </Header>
-        <main>
-          <section className="entry-form">
-            <Form onSubmission={setFormSubmission}>
-              <Form.Dropdown
-                labelText="Badge Color: "
-                name="badge-color"
-                options={formObj.badges.colors}
-              />
-              <Form.Radios
-                labelText="Badge Shape: "
-                name="badge-shape"
-                options={formObj.badges.shapes}
-              />
-            </Form>
-          </section>
-          <section className="render-window">
-            <Badge text="Badge" style={formSubmission} />
-          </section>
-        </main>
+        <Main
+          formSubmission={formSubmission}
+          setFormSubmission={setFormSubmission}
+        />
       </div>
     </LightDarkContext.Provider>
   );
 }
 
 export default App;
+
+// <section className="entry-form">
+//   <Form onSubmission={setFormSubmission}>
+//     <Form.Dropdown
+//       labelText="Badge Color: "
+//       name="badge-color"
+//       options={formObj.badges.colors}
+//     />
+//     <Form.Radios
+//       labelText="Badge Shape: "
+//       name="badge-shape"
+//       options={formObj.badges.shapes}
+//     />
+//   </Form>
+// </section>
+// <section className="render-window">
+//   <Badge text="Badge" style={formSubmission} />
+// </section>
