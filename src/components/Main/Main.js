@@ -32,7 +32,21 @@ export default function Main(props) {
         );
         break;
       case "banners":
-        setFormElements(<p>Banners form here.</p>);
+        setFormElements(
+          <>
+            <Form.Radios
+              labelText="Banner Format: "
+              name="banner-format"
+              options={formObj.banners.formats}
+            />
+            <Form.Dropdown
+              labelText="Banner Type: "
+              name="banner-type"
+              options={formObj.banners.types}
+            />
+            <p>Text input to go here.</p>
+          </>,
+        );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "cards":
