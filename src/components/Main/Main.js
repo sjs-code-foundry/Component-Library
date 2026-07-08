@@ -32,19 +32,24 @@ export default function Main(props) {
         );
         break;
       case "banners":
-        console.log("Banners tab selected.");
+        setFormElements(<p>Banners form here.</p>);
+        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "cards":
-        console.log("Cards tab selected.");
+        setFormElements(<p>Cards form here.</p>);
+        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "testimonials":
-        console.log("Testimonials tab selected.");
+        setFormElements(<p>Testimonials form here.</p>);
+        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "tooltips":
-        console.log("Tooltips tab selected.");
+        setFormElements(<p>Tooltips form here.</p>);
+        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "toast-popups":
-        console.log("Toast Popups tab selected.");
+        setFormElements(<p>Toast Popups form here.</p>);
+        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       default:
         setFormElements(<p>Form not loaded.</p>);
