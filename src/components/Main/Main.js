@@ -10,6 +10,8 @@ export default function Main(props) {
   const [formElements, setFormElements] = useState(null);
   const [renderWindowElements, setRenderWindowElements] = useState(null);
 
+  // How can we make it so that clicking a tab will erase formData?
+
   useEffect(() => {
     switch (props.tab) {
       case "badges":
