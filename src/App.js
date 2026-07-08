@@ -18,7 +18,6 @@ import { formObj } from "./helpers/constants";
 
 const LightDarkContext = createContext();
 export { LightDarkContext };
-// Do we even need context?
 
 function App() {
   document.title = "Component Library";

@@ -5,7 +5,9 @@ import clsx from "clsx";
 import { LightDarkContext } from "../../App";
 
 export default function Radios(props) {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(
+    JSON.stringify(props.options[0].value),
+  );
 
   const { dark } = useContext(LightDarkContext);
 
@@ -16,10 +18,8 @@ export default function Radios(props) {
 
   const optionsElements = props.options.map((option, index) => {
     return (
-      <div className="radio-option">
-        <label key={index} name={props.name}>
-          {option.name}
-        </label>
+      <div key={index} className="radio-option">
+        <label name={props.name}>{option.name}</label>
         <input
           type="radio"
           name={props.name}
