@@ -20,6 +20,7 @@ function App() {
 
   const [dark, toggleDark] = useToggle(false, true, () => {});
   // Perhaps implement localStorage to remember dark mode setting?
+  const [tab, setTab] = useState("badges");
   const [formSubmission, setFormSubmission] = useState(null);
 
   const appRef = useRef(null);
@@ -31,6 +32,10 @@ function App() {
       ? (bodyRef.classList = "dark-bg dark-text")
       : (bodyRef.classList = "light-bg light-text");
   }, [dark]);
+
+  function handleTabSelect(tab) {
+    setTab(tab);
+  }
 
   return (
     <LightDarkContext.Provider value={{ dark, toggleDark }}>
@@ -52,42 +57,43 @@ function App() {
         <Header className={dark ? "dark-border-bottom" : "light-border-bottom"}>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Badges button clicked.")}
+            onClick={() => handleTabSelect("badges")}
           >
             Badges
           </Header.Button>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Banners button clicked.")}
+            onClick={() => handleTabSelect("banners")}
           >
             Banners
           </Header.Button>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Cards button clicked.")}
+            onClick={() => handleTabSelect("cards")}
           >
             Cards
           </Header.Button>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Testimonials button clicked.")}
+            onClick={() => handleTabSelect("testimonials")}
           >
             Testimonials
           </Header.Button>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Tooltips button clicked.")}
+            onClick={() => handleTabSelect("tooltips")}
           >
             Tooltips
           </Header.Button>
           <Header.Button
             className={dark ? "dark-text" : "light-text"}
-            onClick={() => console.log("Toast Popups button clicked.")}
+            onClick={() => handleTabSelect("toast-popups")}
           >
             Toast Popups
           </Header.Button>
         </Header>
         <Main
+          tab={tab}
           formSubmission={formSubmission}
           setFormSubmission={setFormSubmission}
         />

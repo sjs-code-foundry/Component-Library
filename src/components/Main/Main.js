@@ -5,8 +5,6 @@ import { formObj } from "../../helpers/constants";
 // Implement a button that lets all possible combinations be displayed?
 
 export default function Main(props) {
-  console.log(props);
-
   return (
     <main>
       <section className="entry-form">
