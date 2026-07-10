@@ -136,6 +136,7 @@ div.text-input > textarea {
     min-width: 30em;
     min-height: 2em;
 
+    padding: 1em;
     border: none;
     border-radius: 1em;
 }
