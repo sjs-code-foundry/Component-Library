@@ -46,7 +46,16 @@ export default function Main(props) {
               name="banner-type"
               options={formObj.banners.types}
             />
-            <p>Text input to go here.</p>
+            <Form.Text
+              labelText="Banner Title: "
+              name="banner-title"
+              multiLine={false}
+            />
+            <Form.Text
+              labelText="Banner Message: "
+              name="banner-message"
+              multiLine={true}
+            />
           </>,
         );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
