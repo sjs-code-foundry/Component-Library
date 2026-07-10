@@ -117,11 +117,35 @@ section.entry-form > form {
     padding: 2em 0;
 }
 
-section.entry-form > form > label {
+section.entry-form > form > div > label {
     margin-top: 1em;
     margin-bottom: 0.4em;
 
     font-size: 110%;
+}
+
+div.text-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+}
+
+div.text-input > input,
+div.text-input > textarea {
+    min-width: 30em;
+    min-height: 2em;
+}
+
+div.text-input > textarea {
+    min-height: 5em;
+}
+
+div.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
 }
 
 .select {

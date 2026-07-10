@@ -15,7 +15,7 @@ export default function Dropdown(props) {
   }
 
   return (
-    <>
+    <div className="dropdown">
       <label htmlFor={props.name}>{props.labelText}</label>
       <select
         name={props.name}
@@ -30,6 +30,6 @@ export default function Dropdown(props) {
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 }
