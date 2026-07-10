@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import Form from "../EntryForm";
 import Badge from "../ComponentElements/Badge";
+import Banner from "../ComponentElements/Banner";
 
 import { formObj } from "../../helpers/constants";
 // Implement a button that lets all possible combinations be displayed?
@@ -58,7 +59,7 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
+        setRenderWindowElements(<Banner style={props.formSubmission} />);
         break;
       case "cards":
         setFormElements(<p>Cards form here.</p>);
