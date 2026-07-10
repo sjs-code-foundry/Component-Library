@@ -142,7 +142,8 @@ div.text-input > textarea {
 }
 
 div.text-input > textarea {
-    min-height: 5em;
+    min-height: 6em;
+    resize: none;
 }
 
 div.dropdown {
