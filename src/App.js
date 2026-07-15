@@ -34,8 +34,21 @@ function App() {
   }, [dark]);
 
   function handleTabSelect(tab) {
-    setFormSubmission(null);
-    setTab(tab);
+    function navigationActions() {
+      setFormSubmission(null);
+      setTab(tab);
+    }
+
+    if (formSubmission !== null) {
+      const message =
+        "Navigating away from this tab will erase your current component, do you wish to continue?";
+      if (window.confirm(message)) {
+        // Code if user wants to navigate away
+        navigationActions();
+      }
+    } else {
+      navigationActions();
+    }
   }
 
   return (
