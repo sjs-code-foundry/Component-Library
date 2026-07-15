@@ -35,11 +35,6 @@ export default function Main(props) {
       case "banners":
         setFormElements(
           <>
-            <Form.Radios
-              labelText="Banner Format: "
-              name="banner-format"
-              options={formObj.banners.formats}
-            />
             <Form.Dropdown
               labelText="Banner Type: "
               name="banner-type"
