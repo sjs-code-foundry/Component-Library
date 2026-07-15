@@ -24,6 +24,7 @@ export default function Text(props) {
           name={props.name}
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
+          placeholder={props.placeholder}
           onChange={handleChange}
         ></textarea>
       ) : (
@@ -32,6 +33,7 @@ export default function Text(props) {
           name={props.name}
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
+          placeholder={props.placeholder}
           onChange={handleChange}
         />
       )}

@@ -36,6 +36,11 @@
     color: var(--color-light-bg);
 }
 
+.light-accent::placeholder {
+    color: var(--color-light-bg);
+    opacity: 0.5;
+}
+
 .light-bulb-icon {
     color: black;
 }
@@ -55,6 +60,11 @@
 .dark-accent {
     background-color: var(--color-dark-accent-bg);
     color: var(--color-dark-text);
+}
+
+.dark-accent::placeholder {
+    color: var(--color-dark-bg);
+    opacity: 0.8;
 }
 
 .dark-bulb-icon {
