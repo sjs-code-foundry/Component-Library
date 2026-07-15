@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Banner(props) {
-  const [bannerCSS, setBannerCSS] = useState({
-    display: "flex",
-    color: "white",
-    backgroundColor: "black",
-  });
+  const [bannerCSS, setBannerCSS] = useState({ display: "none" });
   const [iconSVG, setIconSVG] = useState(
     <svg
       width="20"
