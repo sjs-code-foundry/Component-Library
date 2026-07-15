@@ -18,24 +18,24 @@ export default function Banner(props) {
       />
     </svg>,
   );
-  const [titleCSS, setTitleCSS] = useState({});
-
-  // console.log(props.style.get("banner-format"));
-  // console.log(props.style.get("banner-type"));
-  // console.log(props.style.get("banner-title"));
-  // console.log(props.style.get("banner-message"));
+  const [title, setTitle] = useState(null);
+  const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    if (props.style) {
-      // const bannerFormat = JSON.parse(props.style.get("banner-format"));
-      //
+    if (props.properties) {
+      console.log(props.properties.get("banner-title"));
+      console.log(props.properties.get("banner-message"));
+
+      const bannerStyles = JSON.parse(props.properties.get("banner-type"));
+      console.log(bannerStyles);
+
       // setBannerCSS({
-      //   color: bannerColor.textColor,
-      //   backgroundColor: bannerColor.bodyColor,
+      //   color: bannerStyles.textColor,
+      //   backgroundColor: bannerStyles.bodyColor,
       //   borderRadius: bannerShape.borderRadius,
       // });
     }
-  }, [props.style]);
+  }, [props.properties]);
 
   return (
     <div className="banner" style={bannerCSS}>

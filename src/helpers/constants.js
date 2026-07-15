@@ -21,7 +21,6 @@ export const formObj = {
         name: "Success",
         value: {
           bodyColor: "#ECFDF5",
-          iconColor: "#34D399",
           titleColor: "#065F46",
           textColor: "#047857",
           iconSVG: (
@@ -46,7 +45,6 @@ export const formObj = {
         name: "Warning",
         value: {
           bodyColor: "#FFFBEB",
-          iconColor: "#FBBF24",
           titleColor: "#92400E",
           textColor: "#B45309",
         },
@@ -55,7 +53,6 @@ export const formObj = {
         name: "Error",
         value: {
           bodyColor: "#FEF2F2",
-          iconColor: "#F87171",
           titleColor: "#92400E",
           textColor: "#B45309",
         },
@@ -64,7 +61,6 @@ export const formObj = {
         name: "Neutral",
         value: {
           bodyColor: "#EFF6FF",
-          iconColor: "#60A5FA",
           titleColor: "#1E40AF",
           textColor: "#1C51B9",
         },

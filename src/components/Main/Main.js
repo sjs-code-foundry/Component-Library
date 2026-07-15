@@ -53,7 +53,7 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<Banner style={props.formSubmission} />);
+        setRenderWindowElements(<Banner properties={props.formSubmission} />);
         break;
       case "cards":
         setFormElements(<p>Cards form here.</p>);
