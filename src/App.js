@@ -34,6 +34,7 @@ function App() {
   }, [dark]);
 
   function handleTabSelect(tab) {
+    setFormSubmission(null);
     setTab(tab);
   }
 
