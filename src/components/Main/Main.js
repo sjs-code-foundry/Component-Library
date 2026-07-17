@@ -44,12 +44,14 @@ export default function Main(props) {
               labelText="Banner Title: "
               name="banner-title"
               multiLine={false}
+              required={true}
             />
             <Form.Text
               labelText="Banner Message: "
               name="banner-message"
               multiLine={true}
               placeholder="Enter text here to generate a multi-line banner."
+              required={false}
             />
           </>,
         );
