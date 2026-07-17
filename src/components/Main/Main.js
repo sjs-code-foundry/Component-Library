@@ -44,6 +44,7 @@ export default function Main(props) {
               labelText="Banner Title: "
               name="banner-title"
               multiLine={false}
+              placeholder="Required."
               required={true}
             />
             <Form.Text
@@ -64,12 +65,14 @@ export default function Main(props) {
               labelText="Card Title: "
               name="card-title"
               multiLine={false}
+              placeholder="Required."
               required={true}
             />
             <Form.Text
               labelText="Card Message: "
               name="card-message"
               multiLine={true}
+              placeholder="Required."
               required={true}
             />
           </>,
@@ -77,7 +80,31 @@ export default function Main(props) {
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "testimonials":
-        setFormElements(<p>Testimonials form here.</p>);
+        setFormElements(
+          <>
+            <p>Image upload here.</p>
+            <Form.Text
+              labelText="Testimonial Message: "
+              name="testimonial-message"
+              multiLine={true}
+              placeholder="Required."
+              required={true}
+            />
+            <Form.Text
+              labelText="Name: "
+              name="testimonial-name"
+              multiLine={false}
+              placeholder="Required."
+              required={true}
+            />
+            <Form.Text
+              labelText="Occupation: "
+              name="testimonial-occupation"
+              multiLine={false}
+              required={false}
+            />
+          </>,
+        );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "tooltips":
