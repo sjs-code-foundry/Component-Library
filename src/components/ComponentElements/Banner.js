@@ -4,7 +4,6 @@ export default function Banner(props) {
   const [bannerCSS, setBannerCSS] = useState({ display: "none" });
   const [titleCSS, setTitleCSS] = useState(null);
   const [iconSVG, setIconSVG] = useState(null);
-  console.log(iconSVG);
   const [title, setTitle] = useState(null);
   const [message, setMessage] = useState(null);
 

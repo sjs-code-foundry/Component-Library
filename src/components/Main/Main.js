@@ -108,7 +108,34 @@ export default function Main(props) {
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "tooltips":
-        setFormElements(<p>Tooltips form here.</p>);
+        setFormElements(
+          <>
+            <Form.Text
+              labelText="Tooltip Title: "
+              name="tooltip-title"
+              multiLine={false}
+              placeholder="Required."
+              required={true}
+            />
+            <Form.Text
+              labelText="Tooltip Message: "
+              name="tooltip-message"
+              multiLine={true}
+              placeholder="Required."
+              required={true}
+            />
+            <Form.Dropdown
+              labelText="Tooltip Color: "
+              name="tooltip-color"
+              options={formObj.tooltips.colors}
+            />
+            <Form.Radios
+              labelText="Tooltip Style: "
+              name="tooltip-style"
+              options={formObj.tooltips.styles}
+            />
+          </>,
+        );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "toast-popups":

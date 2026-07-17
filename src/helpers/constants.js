@@ -103,4 +103,80 @@ export const formObj = {
       },
     ],
   },
+  tooltips: {
+    colors: [
+      {
+        name: "Black & White",
+        value: {
+          boldColors: {
+            bodyColor: "#262626",
+            iconColor: "#C7C7C7",
+            titleColor: "#FFFFFF",
+            textColor: "#C7C7C7",
+          },
+          lightColors: {
+            bodyColor: "#FFFFFF",
+            iconColor: "#6B7280",
+            titleColor: "#111827",
+            textColor: "#6B7280",
+          },
+        },
+      },
+      {
+        name: "Blue",
+        value: {
+          boldColors: {
+            bodyColor: "#1E40AF",
+            iconColor: "#7EA6F2",
+            titleColor: "#FFFFFF",
+            textColor: "#E8EDFF",
+          },
+          lightColors: {
+            bodyColor: "#E0E7FF",
+            iconColor: "#1C51B9",
+            titleColor: "#1E40AF",
+            textColor: "#1C51B9",
+          },
+        },
+      },
+      {
+        name: "Pink & Purple",
+        value: {
+          boldColors: {
+            bodyColor: "#A9229B",
+            iconColor: "#F462E6",
+            titleColor: "#FFFFFF",
+            textColor: "#FFE9FD",
+          },
+          lightColors: {
+            bodyColor: "#FFF3FC",
+            iconColor: "#C7369E",
+            titleColor: "#A9229B",
+            textColor: "#C7369E",
+          },
+        },
+      },
+      {
+        name: "Green",
+        value: {
+          boldColors: {
+            bodyColor: "#47AA5D",
+            iconColor: "#C1FFCF",
+            titleColor: "#FFFFFF",
+            textColor: "#E3FFE9",
+          },
+          lightColors: {
+            bodyColor: "#E7FFF3",
+            iconColor: "#41A557",
+            titleColor: "#137A2A",
+            textColor: "#3C8C4E",
+          },
+        },
+      },
+    ],
+    styles: [
+      { name: "Bold", value: true },
+      { name: "Light", value: false },
+    ],
+  },
 };
