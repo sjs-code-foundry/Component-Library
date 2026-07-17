@@ -58,7 +58,22 @@ export default function Main(props) {
         setRenderWindowElements(<Banner properties={props.formSubmission} />);
         break;
       case "cards":
-        setFormElements(<p>Cards form here.</p>);
+        setFormElements(
+          <>
+            <Form.Text
+              labelText="Card Title: "
+              name="card-title"
+              multiLine={false}
+              required={true}
+            />
+            <Form.Text
+              labelText="Card Message: "
+              name="card-message"
+              multiLine={true}
+              required={true}
+            />
+          </>,
+        );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "testimonials":
