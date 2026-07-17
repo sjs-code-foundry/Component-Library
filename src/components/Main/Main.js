@@ -139,7 +139,29 @@ export default function Main(props) {
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       case "toast-popups":
-        setFormElements(<p>Toast Popups form here.</p>);
+        setFormElements(
+          <>
+            <Form.Dropdown
+              labelText="Toast Popup Type: "
+              name="toast-popup-type"
+              options={formObj.toastPopups.types}
+            />
+            <Form.Text
+              labelText="Toast Popup Title: "
+              name="toast-popup-title"
+              multiLine={false}
+              placeholder="Required."
+              required={true}
+            />
+            <Form.Text
+              labelText="Toast Popup Message: "
+              name="toast-popup-message"
+              multiLine={true}
+              placeholder="Required."
+              required={true}
+            />
+          </>,
+        );
         setRenderWindowElements(<p>Rendering Window not loaded.</p>);
         break;
       default:
