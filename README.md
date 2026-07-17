@@ -20,10 +20,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Tooltips
 - [ ] Toast Popups
 
-### Additional Features
-- [ ] HTML & CSS export
-- [ ] Export code for JS component
-
 ## Available Scripts
 
 In the project directory, you can run:
