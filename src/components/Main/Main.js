@@ -82,7 +82,7 @@ export default function Main(props) {
       case "testimonials":
         setFormElements(
           <>
-            <p>Image upload here.</p>
+            <Form.ImageUpload name="testimonial-image" />
             <Form.Text
               labelText="Testimonial Message: "
               name="testimonial-message"

@@ -178,6 +178,21 @@ div.dropdown {
     justify-content: space-between;
 }
 
+input[type="file"] {
+    display: none;
+}
+
+div.image-upload > label {
+    display: inline-block;
+    cursor: pointer;
+
+    min-width: 30em;
+    /*padding: 1em;*/
+
+    border: none;
+    border-radius: 1em;
+}
+
 section.entry-form > form > button {
     margin-top: 2em;
     padding: 0.5em 1em;
