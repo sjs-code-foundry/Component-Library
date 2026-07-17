@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Components
 
 - [x] Badges
-- [ ] Banners
+- [x] Banners
 - [ ] Cards
 - [ ] Testimonials
 - [ ] Tooltips
