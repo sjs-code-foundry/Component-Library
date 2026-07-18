@@ -15,6 +15,11 @@ export default function Testimonial(props) {
       //   backgroundColor: bannerStyles.bodyColor,
       // });
 
+      console.log(props.properties.get("testimonial-image"));
+      console.log(props.properties.get("testimonial-message"));
+      console.log(props.properties.get("testimonial-name"));
+      console.log(props.properties.get("testimonial-occupation"));
+
       setComponentCSS({ display: "block" });
     }
   }, [props.properties]);

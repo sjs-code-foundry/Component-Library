@@ -15,6 +15,10 @@ export default function ToastPopup(props) {
       //   backgroundColor: bannerStyles.bodyColor,
       // });
 
+      console.log(props.properties.get("toast-popup-type"));
+      console.log(props.properties.get("toast-popup-title"));
+      console.log(props.properties.get("toast-popup-message"));
+
       setComponentCSS({ display: "block" });
     }
   }, [props.properties]);

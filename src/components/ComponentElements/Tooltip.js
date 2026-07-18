@@ -15,6 +15,11 @@ export default function Tooltip(props) {
       //   backgroundColor: bannerStyles.bodyColor,
       // });
 
+      console.log(props.properties.get("tooltip-title"));
+      console.log(props.properties.get("tooltip-message"));
+      console.log(props.properties.get("tooltip-color"));
+      console.log(props.properties.get("tooltip-style"));
+
       setComponentCSS({ display: "block" });
     }
   }, [props.properties]);

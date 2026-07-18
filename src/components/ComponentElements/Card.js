@@ -15,6 +15,9 @@ export default function Card(props) {
       //   backgroundColor: bannerStyles.bodyColor,
       // });
 
+      console.log(props.properties.get("card-title"));
+      console.log(props.properties.get("card-message"));
+
       setComponentCSS({ display: "block" });
     }
   }, [props.properties]);
