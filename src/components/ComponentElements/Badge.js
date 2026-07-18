@@ -1,24 +1,30 @@
 import { useState, useEffect } from "react";
 
 export default function Badge(props) {
-  const [badgeCSS, setBadgeCSS] = useState({ display: "none" });
+  const [componentCSS, setComponentCSS] = useState({ display: "none" });
+  const [text, setText] = useState(null);
 
   useEffect(() => {
-    if (props.style) {
-      const badgeColor = JSON.parse(props.style.get("badge-color"));
-      const badgeShape = JSON.parse(props.style.get("badge-shape"));
+    if (props.properties) {
+      const badgeColor = JSON.parse(props.properties.get("badge-color"));
+      const badgeShape = JSON.parse(props.properties.get("badge-shape"));
 
-      setBadgeCSS({
+      const customText = props.properties.get("badge-text");
+      customText
+        ? setText(props.properties.get("badge-text"))
+        : setText("Badge");
+
+      setComponentCSS({
         color: badgeColor.textColor,
         backgroundColor: badgeColor.bodyColor,
         borderRadius: badgeShape.borderRadius,
       });
     }
-  }, [props.style]);
+  }, [props.properties]);
 
   return (
-    <div className="badge" style={badgeCSS}>
-      <p>{props.text}</p>
+    <div className="badge" style={componentCSS}>
+      <p>{text}</p>
     </div>
   );
 }

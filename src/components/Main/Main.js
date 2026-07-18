@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import Form from "../EntryForm";
 import Badge from "../ComponentElements/Badge";
 import Banner from "../ComponentElements/Banner";
+import Card from "../ComponentElements/Card";
+import Testimonial from "../ComponentElements/Testimonial";
+import Tooltip from "../ComponentElements/Tooltip";
+import ToastPopup from "../ComponentElements/ToastPopup";
 
 import { formObj } from "../../helpers/constants";
 // Implement a button that lets all possible combinations be displayed?
@@ -16,6 +20,13 @@ export default function Main(props) {
       case "badges":
         setFormElements(
           <>
+            <Form.Text
+              labelText="Badge Text: "
+              name="badge-text"
+              multiLine={false}
+              placeholder="Enter custom text."
+              required={false}
+            />
             <Form.Dropdown
               labelText="Badge Color: "
               name="badge-color"
@@ -28,9 +39,7 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(
-          <Badge text="Badge" style={props.formSubmission} />,
-        );
+        setRenderWindowElements(<Badge properties={props.formSubmission} />);
         break;
       case "banners":
         setFormElements(
@@ -77,7 +86,7 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
+        setRenderWindowElements(<Card properties={props.formSubmission} />);
         break;
       case "testimonials":
         setFormElements(
@@ -105,7 +114,9 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
+        setRenderWindowElements(
+          <Testimonial properties={props.formSubmission} />,
+        );
         break;
       case "tooltips":
         setFormElements(
@@ -136,7 +147,7 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
+        setRenderWindowElements(<Tooltip properties={props.formSubmission} />);
         break;
       case "toast-popups":
         setFormElements(
@@ -162,7 +173,9 @@ export default function Main(props) {
             />
           </>,
         );
-        setRenderWindowElements(<p>Rendering Window not loaded.</p>);
+        setRenderWindowElements(
+          <ToastPopup properties={props.formSubmission} />,
+        );
         break;
       default:
         setFormElements(<p>Form not loaded.</p>);
