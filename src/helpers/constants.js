@@ -120,6 +120,7 @@ export const formObj = {
           image: {
             width: "24em",
             height: "29em",
+            borderRadius: "0.75em",
           },
         },
       },
@@ -132,8 +133,9 @@ export const formObj = {
             height: "40.875em",
           },
           image: {
-            width: "23.5em",
+            width: "21.5em",
             height: "12.875em",
+            borderRadius: "0.75em",
           },
         },
       },
