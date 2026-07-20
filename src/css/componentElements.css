@@ -51,6 +51,21 @@
 
 /* --- Cards --- */
 
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f9fafb;
+
+    width: 24em;
+    height: 13em;
+
+    border: none;
+    border-radius: 0.5em;
+}
+
 /* --- Testimonials --- */
 
 /* --- Tooltips --- */
