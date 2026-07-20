@@ -212,6 +212,7 @@ section.render-window {
     justify-content: center;
 
     min-height: 30em;
+    padding: 5em;
 
     background-color: dimgrey;
     border-radius: 1em;
