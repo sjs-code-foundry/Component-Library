@@ -106,8 +106,14 @@
 
 /* --- Testimonials --- */
 
+/* Temporary for testing */
 .testimonial {
     background-color: white;
+}
+
+.testimonial-image {
+    background-color: black;
+    color: white;
 }
 
 /* --- Tooltips --- */

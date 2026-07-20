@@ -109,8 +109,34 @@ export const formObj = {
       { name: "Plain Text", value: false },
     ],
     display: [
-      { name: "Desktop", value: { width: "84.875em", height: "25em" } },
-      { name: "Mobile", value: { width: "23.5em", height: "40.875em" } },
+      {
+        name: "Desktop",
+        value: {
+          container: {
+            flexDirection: "row",
+            width: "84.875em",
+            height: "25em",
+          },
+          image: {
+            width: "24em",
+            height: "29em",
+          },
+        },
+      },
+      {
+        name: "Mobile",
+        value: {
+          container: {
+            flexDirection: "column",
+            width: "23.5em",
+            height: "40.875em",
+          },
+          image: {
+            width: "23.5em",
+            height: "12.875em",
+          },
+        },
+      },
     ],
   },
   tooltips: {

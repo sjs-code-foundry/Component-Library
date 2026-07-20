@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function Testimonial(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
+  const [imageCSS, setImageCSS] = useState(null);
   // const [titleCSS, setTitleCSS] = useState(null);
   // Add state values as required
 
@@ -22,23 +23,31 @@ export default function Testimonial(props) {
       console.log(props.properties.get("testimonial-format"));
       console.log(props.properties.get("testimonial-display"));
 
-      const commonCSS = { display: "block" };
+      function amalgamateContainerCSS() {
+        const commonCSS = { display: "flex", alignItems: "center" };
 
-      const displayCSS = JSON.parse(
-        props.properties.get("testimonial-display"),
-      );
+        const displayCSS = JSON.parse(
+          props.properties.get("testimonial-display"),
+        );
 
-      const combinedCSS = { ...commonCSS, ...displayCSS };
-      console.log(combinedCSS);
+        const combinedCSS = { ...commonCSS, ...displayCSS.container };
+        console.log(combinedCSS);
 
-      setComponentCSS(combinedCSS);
+        setImageCSS(displayCSS.image);
+
+        return combinedCSS;
+      }
+
+      setComponentCSS(amalgamateContainerCSS);
     }
   }, [props.properties]);
 
   return (
     <div className="testimonial" style={componentCSS}>
       {/* Contents of component here */}
-      <div className="testimonial-image">Image</div>
+      <div className="testimonial-image" style={imageCSS}>
+        Image
+      </div>
       <div className="testimonial-text-area">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius,
