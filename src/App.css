@@ -211,7 +211,7 @@ section.render-window {
     align-items: center;
     justify-content: center;
 
-    min-height: 20vh;
+    min-height: 30em;
 
     background-color: dimgrey;
     border-radius: 1em;
