@@ -22,7 +22,16 @@ export default function Testimonial(props) {
       console.log(props.properties.get("testimonial-format"));
       console.log(props.properties.get("testimonial-display"));
 
-      setComponentCSS({ display: "block" });
+      const commonCSS = { display: "block" };
+
+      const displayCSS = JSON.parse(
+        props.properties.get("testimonial-display"),
+      );
+
+      const combinedCSS = { ...commonCSS, ...displayCSS };
+      console.log(combinedCSS);
+
+      setComponentCSS(combinedCSS);
     }
   }, [props.properties]);
 
