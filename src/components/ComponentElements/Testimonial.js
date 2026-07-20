@@ -29,7 +29,20 @@ export default function Testimonial(props) {
   return (
     <div className="testimonial" style={componentCSS}>
       {/* Contents of component here */}
-      <p>This is a testimonial.</p>
+      <div className="testimonial-image">Image</div>
+      <div className="testimonial-text-area">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius,
+          felis a scelerisque elementum, nulla diam pulvinar nisl, quis rhoncus
+          nibh augue quis augue. Morbi consectetur fermentum justo, vitae
+          elementum sem. Curabitur molestie tempor ex, id ultrices sem tincidunt
+          at. Praesent arcu elit, tempor eu nunc ac, auctor.
+        </p>
+        <div className="testimonial-name-area">
+          <p>Jimmy Centrist</p>
+          <p>CTO at Brickage PLC</p>
+        </div>
+      </div>
     </div>
   );
 }
