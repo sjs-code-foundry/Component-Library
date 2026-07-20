@@ -19,6 +19,8 @@ export default function Testimonial(props) {
       console.log(props.properties.get("testimonial-message"));
       console.log(props.properties.get("testimonial-name"));
       console.log(props.properties.get("testimonial-occupation"));
+      console.log(props.properties.get("testimonial-format"));
+      console.log(props.properties.get("testimonial-display"));
 
       setComponentCSS({ display: "block" });
     }

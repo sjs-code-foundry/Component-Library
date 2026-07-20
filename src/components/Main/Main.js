@@ -112,6 +112,16 @@ export default function Main(props) {
               multiLine={false}
               required={false}
             />
+            <Form.Dropdown
+              labelText="Testimonial Format: "
+              name="testimonial-format"
+              options={formObj.testimonials.format}
+            />
+            <Form.Radios
+              labelText="Display Mode: "
+              name="testimonial-display"
+              options={formObj.testimonials.display}
+            />
           </>,
         );
         setRenderWindowElements(

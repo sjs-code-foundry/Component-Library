@@ -103,6 +103,16 @@ export const formObj = {
       },
     ],
   },
+  testimonials: {
+    format: [
+      { name: "With Image", value: true },
+      { name: "Plain Text", value: false },
+    ],
+    display: [
+      { name: "Desktop", value: true },
+      { name: "Mobile", value: false },
+    ],
+  },
   tooltips: {
     colors: [
       {
