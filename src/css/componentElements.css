@@ -121,6 +121,21 @@
 
     background-color: black;
     color: white;
+
+    z-index: 1;
+}
+
+.testimonial-whitebar-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: inherit;
+    height: 6.4375em;
+
+    background-color: #ffffff;
+
+    z-index: 0;
 }
 
 .testimonial-quote-svg {
@@ -128,6 +143,10 @@
 }
 
 .testimonial-text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
     text-align: left;
     font-size: 1.5rem;
     font-weight: 500;
@@ -172,10 +191,6 @@
 }
 
 .testimonial-text-area-desktop {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-
     margin-top: 6.5em;
     margin-bottom: 4em;
     margin-right: 4.4375em;

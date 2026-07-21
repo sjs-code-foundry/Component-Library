@@ -41,7 +41,7 @@ export default function Testimonial(props) {
       )}
       style={componentCSS}
     >
-      {/* Contents of component here */}
+      {!display && <div className="testimonial-whitebar-mobile"></div>}
       <svg
         className={clsx(
           "testimonial-quote-svg",
