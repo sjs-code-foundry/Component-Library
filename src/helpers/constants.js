@@ -104,66 +104,13 @@ export const formObj = {
     ],
   },
   testimonials: {
-    commomCSS: {
-      container: {
-        display: "flex",
-        alignItems: "center",
-      },
-      image: {
-        borderRadius: "0.75em",
-      },
-      textArea: {
-        textAlign: "left",
-        fontSize: "1.5rem",
-        fontWeight: "500",
-      },
-      textNameArea: {
-        fontSize: "1rem",
-      },
-    },
     format: [
       { name: "With Image", value: true },
       { name: "Plain Text", value: false },
     ],
     display: [
-      {
-        name: "Desktop",
-        value: {
-          container: {
-            flexDirection: "row",
-            gap: "2em",
-            width: "84.875em",
-            height: "25em",
-          },
-          image: {
-            minWidth: "24em",
-            height: "29em",
-            marginLeft: "4.4375em",
-          },
-          textArea: {
-            marginTop: "5em",
-            marginBottom: "5em",
-            marginRight: "4.4375em",
-          },
-        },
-      },
-      {
-        name: "Mobile",
-        value: {
-          container: {
-            flexDirection: "column",
-            width: "23.5em",
-            height: "40.875em",
-          },
-          image: {
-            width: "21.5em",
-            minHeight: "12.875em",
-          },
-          textArea: {
-            margin: "4.5em 1em",
-          },
-        },
-      },
+      { name: "Desktop", value: true },
+      { name: "Mobile", value: false },
     ],
   },
   tooltips: {

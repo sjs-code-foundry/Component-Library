@@ -1,25 +1,22 @@
 import { useState, useEffect } from "react";
 
+import clsx from "clsx";
+
 import { formObj } from "../../helpers/constants";
 
 export default function Testimonial(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
-  const [imageCSS, setImageCSS] = useState(null);
-  const [textAreaCSS, setTextAreaCSS] = useState(null);
-  const [textAreaNameCSS, setTextAreaNameCSS] = useState(null);
+  const [format, setFormat] = useState(null);
+  const [display, setDisplay] = useState(null);
+  console.log(`Display in desktop mode? ${display}`);
+  // const [imageCSS, setImageCSS] = useState(null);
+  // const [textAreaCSS, setTextAreaCSS] = useState(null);
+  // const [textAreaNameCSS, setTextAreaNameCSS] = useState(null);
   // const [titleCSS, setTitleCSS] = useState(null);
   // Add state values as required
 
   useEffect(() => {
     if (props.properties) {
-      // setTitle(props.properties.get("banner-title"));
-      // setMessage(props.properties.get("banner-message"));
-      // const bannerStyles = JSON.parse(props.properties.get("banner-type"));
-      // setComponentCSS({
-      //   color: bannerStyles.textColor,
-      //   backgroundColor: bannerStyles.bodyColor,
-      // });
-
       console.log(props.properties.get("testimonial-image"));
       console.log(props.properties.get("testimonial-message"));
       console.log(props.properties.get("testimonial-name"));
@@ -27,39 +24,23 @@ export default function Testimonial(props) {
       console.log(props.properties.get("testimonial-format"));
       console.log(props.properties.get("testimonial-display"));
 
-      function amalgamateCSS() {
-        const commonCSS = formObj.testimonials.commomCSS.container;
-        const commonImageCSS = formObj.testimonials.commomCSS.image;
-        const commonTextAreaCSS = formObj.testimonials.commomCSS.textArea;
-        const commonTextAreaNameCSS =
-          formObj.testimonials.commomCSS.textNameArea;
+      setFormat(/true/.test(props.properties.get("testimonial-format")));
+      setDisplay(/true/.test(props.properties.get("testimonial-display")));
+      // Regex test to make sure boolean lifted from object is parsed as a strict boolean
 
-        const displayCSS = JSON.parse(
-          props.properties.get("testimonial-display"),
-        );
-
-        const combinedCSS = { ...commonCSS, ...displayCSS.container };
-        const combinedImageCSS = { ...commonImageCSS, ...displayCSS.image };
-        const combinedTextAreaCSS = {
-          ...commonTextAreaCSS,
-          ...displayCSS.textArea,
-        };
-        console.log(combinedTextAreaCSS);
-        const combinedTextAreaNameCSS = { ...commonTextAreaNameCSS };
-
-        setImageCSS(combinedImageCSS);
-        setTextAreaCSS(combinedTextAreaCSS);
-        setTextAreaNameCSS(combinedTextAreaNameCSS);
-
-        return combinedCSS;
-      }
-
-      setComponentCSS(amalgamateCSS);
+      setComponentCSS({ display: "flex" });
     }
   }, [props.properties]);
 
   return (
-    <div className="testimonial" style={componentCSS}>
+    <div
+      className={clsx(
+        "testimonial",
+        display && "testimonial-container-desktop",
+        !display && "testimonial-container-mobile",
+      )}
+      style={componentCSS}
+    >
       {/* Contents of component here */}
       <svg
         className="testimonial-quote-svg"
@@ -75,17 +56,29 @@ export default function Testimonial(props) {
           fillOpacity="0.25"
         />
       </svg>
-      <div className="testimonial-image" style={imageCSS}>
+      <div
+        className={clsx(
+          "testimonial-image",
+          display && "testimonial-image-desktop",
+          !display && "testimonial-image-mobile",
+        )}
+      >
         Image
       </div>
-      <div className="testimonial-text-area" style={textAreaCSS}>
+      <div
+        className={clsx(
+          "testimonial-text-area",
+          display && "testimonial-text-area-desktop",
+          !display && "testimonial-text-area-mobile",
+        )}
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
           nulla vitae laoreet augue. Amet feugiat est integer dolor auctor
           adipiscing nunc urna, sit.
         </p>
-        <div className="testimonial-name-area" style={textAreaNameCSS}>
-          <p style={{ fontWeight: "700" }}>Jimmy Centrist</p>
+        <div className="testimonial-name-area">
+          <p className="testimonial-name">Jimmy Centrist</p>
           <p>CTO at Brickage PLC</p>
         </div>
       </div>

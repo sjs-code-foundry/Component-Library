@@ -106,26 +106,77 @@
 
 /* --- Testimonials --- */
 
-/* Temporary for testing */
 .testimonial {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
     background-color: white;
 }
 
 .testimonial-image {
+    border: none;
+    border-radius: 0.75em;
+
     background-color: black;
     color: white;
-}
-
-/* Actual */
-
-.testimonial {
-    position: relative;
 }
 
 .testimonial-quote-svg {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.testimonial-text-area {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.testimonial-name-area {
+    font-size: 1rem;
+}
+
+.testimonial-name {
+    font-weight: 700;
+}
+
+/* Utility Classes */
+
+.testimonial-container-desktop {
+    flex-direction: row;
+    gap: 2em;
+    width: 84.875em;
+    height: 25em;
+}
+
+.testimonial-image-desktop {
+    min-width: 24em;
+    height: 29em;
+    margin-left: 4.4375em;
+}
+
+.testimonial-text-area-desktop {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: 4.4375em;
+}
+
+.testimonial-container-mobile {
+    flex-direction: column;
+    width: 23.5em;
+    height: 40.875em;
+}
+
+.testimonial-image-mobile {
+    width: 21.5em;
+    min-height: 12.875em;
+}
+
+.testimonial-text-area-mobile {
+    margin: 4.5em 1em;
 }
 
 /* --- Tooltips --- */
