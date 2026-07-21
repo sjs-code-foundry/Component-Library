@@ -135,6 +135,12 @@
 
 .testimonial-name-area {
     font-size: 1rem;
+    line-height: 1.5em;
+}
+
+.testimonial-text-area > p,
+.testimonial-name-area > p {
+    margin: 0;
 }
 
 .testimonial-name {
@@ -166,8 +172,12 @@
 }
 
 .testimonial-text-area-desktop {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    margin-top: 6.5em;
+    margin-bottom: 4em;
     margin-right: 4.4375em;
 }
 
