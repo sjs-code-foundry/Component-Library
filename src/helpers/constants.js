@@ -104,6 +104,23 @@ export const formObj = {
     ],
   },
   testimonials: {
+    commomCSS: {
+      container: {
+        display: "flex",
+        alignItems: "center",
+      },
+      image: {
+        borderRadius: "0.75em",
+      },
+      textArea: {
+        textAlign: "left",
+        fontSize: "1.5rem",
+        fontWeight: "500",
+      },
+      textNameArea: {
+        fontSize: "1rem",
+      },
+    },
     format: [
       { name: "With Image", value: true },
       { name: "Plain Text", value: false },
@@ -114,13 +131,19 @@ export const formObj = {
         value: {
           container: {
             flexDirection: "row",
+            gap: "2em",
             width: "84.875em",
             height: "25em",
           },
           image: {
-            width: "24em",
+            minWidth: "24em",
             height: "29em",
-            borderRadius: "0.75em",
+            marginLeft: "4.4375em",
+          },
+          textArea: {
+            marginTop: "5em",
+            marginBottom: "5em",
+            marginRight: "4.4375em",
           },
         },
       },
@@ -134,8 +157,10 @@ export const formObj = {
           },
           image: {
             width: "21.5em",
-            height: "12.875em",
-            borderRadius: "0.75em",
+            minHeight: "12.875em",
+          },
+          textArea: {
+            margin: "4.5em 1em",
           },
         },
       },

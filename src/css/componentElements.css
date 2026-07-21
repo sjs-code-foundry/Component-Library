@@ -116,6 +116,18 @@
     color: white;
 }
 
+/* Actual */
+
+.testimonial {
+    position: relative;
+}
+
+.testimonial-quote-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* --- Tooltips --- */
 
 /* --- Toast Popups --- */
