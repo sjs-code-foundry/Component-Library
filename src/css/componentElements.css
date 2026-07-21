@@ -125,8 +125,6 @@
 
 .testimonial-quote-svg {
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .testimonial-text-area {
@@ -148,8 +146,17 @@
 .testimonial-container-desktop {
     flex-direction: row;
     gap: 2em;
+
     width: 84.875em;
     height: 25em;
+
+    background-color: #2545b8;
+    color: #ffffff;
+}
+
+.testimonial-quote-svg-desktop {
+    top: 5em;
+    left: 30.4375em;
 }
 
 .testimonial-image-desktop {
@@ -168,6 +175,14 @@
     flex-direction: column;
     width: 23.5em;
     height: 40.875em;
+
+    background-color: #2545b8;
+    color: #ffffff;
+}
+
+.testimonial-quote-svg-mobile {
+    top: 15.875em;
+    left: 1em;
 }
 
 .testimonial-image-mobile {

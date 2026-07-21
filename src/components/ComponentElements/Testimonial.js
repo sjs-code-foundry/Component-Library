@@ -43,7 +43,11 @@ export default function Testimonial(props) {
     >
       {/* Contents of component here */}
       <svg
-        className="testimonial-quote-svg"
+        className={clsx(
+          "testimonial-quote-svg",
+          display && "testimonial-quote-svg-desktop",
+          !display && "testimonial-quote-svg-mobile",
+        )}
         width="48"
         height="48"
         viewBox="0 0 48 48"
