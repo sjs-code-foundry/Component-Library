@@ -4,6 +4,9 @@ import clsx from "clsx";
 
 import QuoteMarks from "./Decorations/QuoteMarks";
 import DotMatrix from "./Decorations/DotMatrix";
+import ForwardSlash from "./Decorations/ForwardSlash";
+
+import logo from "../../img/Logo.png";
 
 // import { formObj } from "../../helpers/constants";
 
@@ -67,12 +70,16 @@ export default function Testimonial(props) {
           display && "testimonial-text-area-desktop",
           !display && "testimonial-text-area-mobile",
           !format && display && "testimonial-text-area-plaintext-desktop",
+          !format && !display && "testimonial-text-area-plaintext-mobile",
         )}
       >
+        {!format && (
+          <img className="testimonial-logo" src={logo} alt="company logo" />
+        )}
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
-          nulla vitae laoreet augue. Amet feugiat est integer dolor auctor
-          adipiscing nunc urna, sit.
+          “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
+          laborum sed rerum et corporis.”
         </p>
         <div
           className={clsx(
@@ -81,6 +88,7 @@ export default function Testimonial(props) {
           )}
         >
           <p className="testimonial-name">Jimmy Centrist</p>
+          {!format && display && <ForwardSlash />}
           <p className={!format && "testimonial-name-occupation-plaintext"}>
             CTO at Brickage PLC
           </p>

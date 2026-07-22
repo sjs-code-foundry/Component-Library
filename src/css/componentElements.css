@@ -146,12 +146,20 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 0;
+}
+
+.testimonial-logo {
+    width: 7.5em;
+
+    margin: 0 auto 0.333em auto;
 }
 
 .testimonial-text-area {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    z-index: 1;
 
     text-align: left;
     font-size: 1.5rem;
@@ -205,6 +213,7 @@
 .testimonial-container-mobile {
     flex-direction: column;
     width: 23.5em;
+    min-height: 34.5em;
     max-height: 40.875em;
 
     background-color: #2545b8;
@@ -232,8 +241,7 @@
 
 .testimonial-text-area-plaintext-desktop {
     text-align: center;
-    margin-left: 12.292em;
-    margin-right: 12.292em;
+    margin: auto 12.292em;
 }
 
 .testimonial-name-area-plaintext-desktop {
@@ -241,7 +249,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 0.25em;
+}
+
+.testimonial-text-area-plaintext-mobile {
+    gap: 1.75em;
+    margin: auto 1em;
 }
 
 .testimonial-name-occupation-plaintext {
