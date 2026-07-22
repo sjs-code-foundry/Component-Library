@@ -219,6 +219,11 @@
     margin: 4.5em 1em;
 }
 
+.testimonial-container-plaintext-desktop {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
 .testimonial-text-area-plaintext-desktop {
     text-align: center;
     margin-left: 12.292em;
@@ -231,6 +236,10 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
+}
+
+.testimonial-name-occupation-plaintext {
+    color: #6b7280;
 }
 
 /* --- Tooltips --- */

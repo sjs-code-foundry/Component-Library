@@ -38,6 +38,7 @@ export default function Testimonial(props) {
         "testimonial",
         display && "testimonial-container-desktop",
         !display && "testimonial-container-mobile",
+        !format && "testimonial-container-plaintext-desktop",
       )}
       style={componentCSS}
     >
@@ -95,7 +96,9 @@ export default function Testimonial(props) {
           )}
         >
           <p className="testimonial-name">Jimmy Centrist</p>
-          <p>CTO at Brickage PLC</p>
+          <p className={!format && "testimonial-name-occupation-plaintext"}>
+            CTO at Brickage PLC
+          </p>
         </div>
       </div>
     </div>
