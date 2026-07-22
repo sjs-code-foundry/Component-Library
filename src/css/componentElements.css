@@ -142,6 +142,12 @@
     position: absolute;
 }
 
+.testimonial-dotmatrix {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .testimonial-text-area {
     display: flex;
     flex-direction: column;
@@ -199,7 +205,7 @@
 .testimonial-container-mobile {
     flex-direction: column;
     width: 23.5em;
-    height: 40.875em;
+    max-height: 40.875em;
 
     background-color: #2545b8;
     color: #ffffff;
@@ -219,8 +225,8 @@
     margin: 4.5em 1em;
 }
 
-.testimonial-container-plaintext-desktop {
-    background-color: #e5e7eb;
+.testimonial-container-plaintext {
+    background-color: #f9fafb;
     color: #111827;
 }
 
