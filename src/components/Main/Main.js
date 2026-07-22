@@ -110,7 +110,8 @@ export default function Main(props) {
               labelText="Occupation: "
               name="testimonial-occupation"
               multiLine={false}
-              required={false}
+              placeholder="Required."
+              required={true}
             />
             <Form.Dropdown
               labelText="Testimonial Format: "
