@@ -16,13 +16,12 @@ export default function Testimonial(props) {
   const [format, setFormat] = useState(null);
   const [display, setDisplay] = useState(null);
   const [imgSrc, setImgSrc] = useState(null);
+  const [message, setMessage] = useState(null);
+  const [name, setName] = useState(null);
+  const [occupation, setOccupation] = useState(null);
 
   useEffect(() => {
     if (props.properties) {
-      // console.log(props.properties.get("testimonial-message"));
-      // console.log(props.properties.get("testimonial-name"));
-      // console.log(props.properties.get("testimonial-occupation"));
-
       const avatar = props.properties.get("testimonial-image");
 
       if (avatar.name !== "") {
@@ -30,6 +29,10 @@ export default function Testimonial(props) {
       } else {
         setImgSrc(null);
       }
+
+      setMessage(props.properties.get("testimonial-message"));
+      setName(props.properties.get("testimonial-name"));
+      setOccupation(props.properties.get("testimonial-occupation"));
 
       setFormat(/true/.test(props.properties.get("testimonial-format")));
       setDisplay(/true/.test(props.properties.get("testimonial-display")));
@@ -77,21 +80,17 @@ export default function Testimonial(props) {
         {!format && (
           <img className="testimonial-logo" src={logo} alt="company logo" />
         )}
-        <p>
-          “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
-          laborum sed rerum et corporis.”
-        </p>
+        <p>{`"${message}"`}</p>
         <div
           className={clsx(
             "testimonial-name-area",
             !format && display && "testimonial-name-area-plaintext-desktop",
           )}
         >
-          <p className="testimonial-name">Jimmy Centrist</p>
+          <p className="testimonial-name">{name}</p>
           {!format && display && <ForwardSlash />}
           <p className={!format && "testimonial-name-occupation-plaintext"}>
-            CTO at Brickage PLC
+            {occupation}
           </p>
         </div>
       </div>
