@@ -7,6 +7,7 @@ import DotMatrix from "./Decorations/DotMatrix";
 import ForwardSlash from "./Decorations/ForwardSlash";
 
 import logo from "../../img/Logo.png";
+import defaultAvatar from "../../img/Default-Avatar.png";
 
 // import { formObj } from "../../helpers/constants";
 
@@ -14,21 +15,21 @@ export default function Testimonial(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
   const [format, setFormat] = useState(null);
   const [display, setDisplay] = useState(null);
-  console.log(`Display in desktop mode? ${display}`);
-  // const [imageCSS, setImageCSS] = useState(null);
-  // const [textAreaCSS, setTextAreaCSS] = useState(null);
-  // const [textAreaNameCSS, setTextAreaNameCSS] = useState(null);
-  // const [titleCSS, setTitleCSS] = useState(null);
-  // Add state values as required
+  const [imgSrc, setImgSrc] = useState(null);
 
   useEffect(() => {
     if (props.properties) {
-      console.log(props.properties.get("testimonial-image"));
-      console.log(props.properties.get("testimonial-message"));
-      console.log(props.properties.get("testimonial-name"));
-      console.log(props.properties.get("testimonial-occupation"));
-      console.log(props.properties.get("testimonial-format"));
-      console.log(props.properties.get("testimonial-display"));
+      // console.log(props.properties.get("testimonial-message"));
+      // console.log(props.properties.get("testimonial-name"));
+      // console.log(props.properties.get("testimonial-occupation"));
+
+      const avatar = props.properties.get("testimonial-image");
+
+      if (avatar.name !== "") {
+        setImgSrc(URL.createObjectURL(avatar));
+      } else {
+        setImgSrc(null);
+      }
 
       setFormat(/true/.test(props.properties.get("testimonial-format")));
       setDisplay(/true/.test(props.properties.get("testimonial-display")));
@@ -54,15 +55,15 @@ export default function Testimonial(props) {
       {format && <QuoteMarks display={display} />}
       {!format && <DotMatrix display={display} />}
       {format && (
-        <div
+        <img
           className={clsx(
             "testimonial-image",
             display && "testimonial-image-desktop",
             !display && "testimonial-image-mobile",
           )}
-        >
-          Image
-        </div>
+          src={imgSrc ? imgSrc : defaultAvatar}
+          alt="Avatar"
+        />
       )}
       <div
         className={clsx(

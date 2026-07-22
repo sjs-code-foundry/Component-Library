@@ -119,8 +119,7 @@
     border: none;
     border-radius: 0.75em;
 
-    background-color: black;
-    color: white;
+    object-fit: cover;
 
     z-index: 1;
 }

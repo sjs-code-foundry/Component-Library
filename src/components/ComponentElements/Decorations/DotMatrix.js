@@ -469,7 +469,7 @@ export default function DotMatrix(props) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_399_291)">
+        <g clipPath="url(#clip0_399_291)">
           <path d="M0 0H4V4H0V0Z" fill="#E5E7EB" />
           <path d="M20 0H24V4H20V0Z" fill="#E5E7EB" />
           <path d="M40 0H44V4H40V0Z" fill="#E5E7EB" />
