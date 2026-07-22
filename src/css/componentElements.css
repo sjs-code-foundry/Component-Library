@@ -219,6 +219,20 @@
     margin: 4.5em 1em;
 }
 
+.testimonial-text-area-plaintext-desktop {
+    text-align: center;
+    margin-left: 12.292em;
+    margin-right: 12.292em;
+}
+
+.testimonial-name-area-plaintext-desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
 /* --- Tooltips --- */
 
 /* --- Toast Popups --- */

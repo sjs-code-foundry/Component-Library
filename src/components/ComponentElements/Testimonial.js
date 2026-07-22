@@ -80,6 +80,7 @@ export default function Testimonial(props) {
           "testimonial-text-area",
           display && "testimonial-text-area-desktop",
           !display && "testimonial-text-area-mobile",
+          !format && display && "testimonial-text-area-plaintext-desktop",
         )}
       >
         <p>
@@ -87,7 +88,12 @@ export default function Testimonial(props) {
           nulla vitae laoreet augue. Amet feugiat est integer dolor auctor
           adipiscing nunc urna, sit.
         </p>
-        <div className="testimonial-name-area">
+        <div
+          className={clsx(
+            "testimonial-name-area",
+            !format && display && "testimonial-name-area-plaintext-desktop",
+          )}
+        >
           <p className="testimonial-name">Jimmy Centrist</p>
           <p>CTO at Brickage PLC</p>
         </div>
