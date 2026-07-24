@@ -18,6 +18,7 @@ export default function Tooltip(props) {
     <div className="tooltip" style={componentCSS}>
       {/* Contents of component here */}
       <p>This is a tooltip.</p>
+      <i class="tooltip-arrow"></i>
     </div>
   );
 }

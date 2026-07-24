@@ -15,10 +15,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [x] Badges
 - [x] Banners
-- [ ] Cards
-- [ ] Testimonials
+- [x] Cards
+- [x] Testimonials
 - [ ] Tooltips
 - [ ] Toast Popups
+
+### Usability
+- [ ] Add character limits for text inputs
 
 ## Available Scripts
 
