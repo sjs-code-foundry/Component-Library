@@ -9,8 +9,6 @@ import ForwardSlash from "./Decorations/ForwardSlash";
 import logo from "../../img/Logo.png";
 import defaultAvatar from "../../img/Default-Avatar.png";
 
-// import { formObj } from "../../helpers/constants";
-
 export default function Testimonial(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
   const [format, setFormat] = useState(null);
