@@ -12,13 +12,13 @@ export default function Tooltip(props) {
       console.log(props.properties.get("tooltip-color"));
       console.log(props.properties.get("tooltip-style"));
 
-      setComponentCSS({ display: "block" });
+      setComponentCSS({ display: "flex" });
     }
   }, [props.properties]);
 
   return (
     <div className="tooltip" style={componentCSS}>
-      <TooltipIcon />
+      <TooltipIcon classNames="tooltip-icon" />
       <div className="tooltip-text-area">
         <h1>Tooltip Title</h1>
         <p>

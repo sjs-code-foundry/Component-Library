@@ -288,6 +288,12 @@
     /* Actual */
     /*visibility: hidden;*/
 
+    /*display: flex;*/
+    /* Display mode determined in component code */
+    flex-direction: row;
+    align-items: start;
+    gap: 0.75em;
+
     position: absolute;
     top: calc(-0.2em - 6.125em - 1.1875em);
     left: calc(-0.2em + 10em);
@@ -295,6 +301,31 @@
 
     width: 24em;
     height: 6.125em;
+}
+
+.tooltip-icon {
+    min-width: 1.5em;
+}
+
+.tooltip-text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0.21875em;
+
+    font-size: 0.875rem;
+}
+
+.tooltip-text-area > h1 {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.tooltip-text-area > h1,
+.tooltip-text-area > p {
+    margin: 0;
+    text-align: left;
 }
 
 .tooltip-arrow {
