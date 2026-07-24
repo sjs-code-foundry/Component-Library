@@ -295,7 +295,7 @@
 
     position: absolute;
     top: calc(-0.2em - 6.125em - 1.1875em);
-    left: calc(-0.2em + 10em);
+    left: calc(-0.2em + 7em);
     z-index: 1;
 
     width: 24em;

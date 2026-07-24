@@ -37,7 +37,7 @@ export default function Tooltip(props) {
       <button className="tooltip-close-btn" onClick={handleClose}>
         <Cross classNames="" />
       </button>
-      <i class="tooltip-arrow"></i>
+      <i className="tooltip-arrow"></i>
     </div>
   );
 }
