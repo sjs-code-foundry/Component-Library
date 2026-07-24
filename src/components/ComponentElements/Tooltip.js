@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import TooltipIcon from "./Decorations/TooltipIcon";
+
 export default function Tooltip(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
 
@@ -16,8 +18,14 @@ export default function Tooltip(props) {
 
   return (
     <div className="tooltip" style={componentCSS}>
-      {/* Contents of component here */}
-      <p>This is a tooltip.</p>
+      <TooltipIcon />
+      <div className="tooltip-text-area">
+        <h1>Tooltip Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum
+          tenetur.
+        </p>
+      </div>
       <i class="tooltip-arrow"></i>
     </div>
   );
