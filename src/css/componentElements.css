@@ -292,7 +292,6 @@
     /* Display mode determined in component code */
     flex-direction: row;
     align-items: start;
-    gap: 0.75em;
 
     position: absolute;
     top: calc(-0.2em - 6.125em - 1.1875em);
@@ -314,6 +313,9 @@
     justify-content: start;
     gap: 0.21875em;
 
+    margin-left: 0.65625em;
+    margin-right: 0.875em;
+
     font-size: 0.875rem;
 }
 
@@ -326,6 +328,17 @@
 .tooltip-text-area > p {
     margin: 0;
     text-align: left;
+}
+
+.tooltip-close-btn {
+    background-color: black;
+
+    width: 1.25em;
+    height: 1.25em;
+
+    border: none;
+
+    cursor: pointer;
 }
 
 .tooltip-arrow {

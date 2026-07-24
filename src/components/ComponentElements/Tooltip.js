@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import TooltipIcon from "./Decorations/TooltipIcon";
+import Cross from "./Decorations/Cross";
 
 export default function Tooltip(props) {
   const [componentCSS, setComponentCSS] = useState({ display: "none" });
@@ -16,6 +17,13 @@ export default function Tooltip(props) {
     }
   }, [props.properties]);
 
+  // Perhaps create a function where clicking the parent element reveals tooltip?
+  // Use a ref to get the parent element
+
+  function handleClose() {
+    console.log("Tooltip closed.");
+  }
+
   return (
     <div className="tooltip" style={componentCSS}>
       <TooltipIcon classNames="tooltip-icon" />
@@ -26,6 +34,9 @@ export default function Tooltip(props) {
           tenetur.
         </p>
       </div>
+      <button className="tooltip-close-btn" onClick={handleClose}>
+        <Cross classNames="" />
+      </button>
       <i class="tooltip-arrow"></i>
     </div>
   );
