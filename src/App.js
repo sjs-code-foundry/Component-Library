@@ -35,6 +35,7 @@ function App() {
 
   function handleTabSelect(tab) {
     function navigationActions() {
+      // Reset form elements
       setFormSubmission(null);
       setTab(tab);
     }

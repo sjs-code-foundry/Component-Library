@@ -286,7 +286,7 @@
     border-radius: 1em;
 
     /* Actual */
-    /*visibility: hidden;*/
+    visibility: hidden;
 
     /*display: flex;*/
     /* Display mode determined in component code */
@@ -300,6 +300,8 @@
 
     width: 24em;
     height: 6.125em;
+
+    cursor: default;
 }
 
 .tooltip-icon {

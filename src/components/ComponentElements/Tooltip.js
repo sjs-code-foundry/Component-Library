@@ -17,11 +17,9 @@ export default function Tooltip(props) {
     }
   }, [props.properties]);
 
-  // Perhaps create a function where clicking the parent element reveals tooltip?
-  // Use a ref to get the parent element
-
   function handleClose() {
     console.log("Tooltip closed.");
+    // Parent div will need to be wired up with a handleOpen function before this can be used.
   }
 
   return (
