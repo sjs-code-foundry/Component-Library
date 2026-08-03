@@ -5,18 +5,12 @@ import clsx from "clsx";
 export default function ToastPopup(props) {
   const [classStr, setClassStr] = useState("");
   const [iconSVG, setIconSVG] = useState(null);
-  const [title, setTitle] = useState("Biscuits!");
-  const [message, setMessage] = useState(
-    "as prose aisle flow made did way to his memory",
-  );
+  const [title, setTitle] = useState(null);
+  const [message, setMessage] = useState(null);
   const [count, setCount] = useState(0);
-  console.log(count);
 
   useEffect(() => {
     if (props.properties) {
-      // console.log(props.properties.get("toast-popup-title"));
-      // console.log(props.properties.get("toast-popup-message"));
-
       const popupType = JSON.parse(props.properties.get("toast-popup-type"));
 
       setClassStr(popupType.classStr);
@@ -28,6 +22,9 @@ export default function ToastPopup(props) {
           createElement("path", popupType.iconChildProps),
         ),
       );
+
+      setTitle(props.properties.get("toast-popup-title"));
+      setMessage(props.properties.get("toast-popup-message"));
 
       setCount(5);
     }

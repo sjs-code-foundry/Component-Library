@@ -186,14 +186,16 @@ export default function Main(props) {
               labelText="Toast Popup Title: "
               name="toast-popup-title"
               multiLine={false}
-              placeholder="Required."
+              placeholder="Required.  Max 44 chars."
+              limit={44}
               required={true}
             />
             <Form.Text
               labelText="Toast Popup Message: "
               name="toast-popup-message"
               multiLine={true}
-              placeholder="Required."
+              placeholder="Required.  Max 44 chars."
+              limit={44}
               required={true}
             />
           </>,
