@@ -625,3 +625,41 @@
 .toast-popup-textarea > p {
     margin: 0;
 }
+
+/* --- Utility Classes - */
+
+.toast-popup-success {
+    background-color: #ecfdf5;
+    color: #047857;
+}
+
+.toast-popup-success-title {
+    color: #065f46;
+}
+
+.toast-popup-warning {
+    background-color: #fffbeb;
+    color: #b45309;
+}
+
+.toast-popup-warning-title {
+    color: #92400e;
+}
+
+.toast-popup-error {
+    background-color: #fef2f2;
+    color: #b45309;
+}
+
+.toast-popup-error-title {
+    color: #92400e;
+}
+
+.toast-popup-neutral {
+    background-color: #eff6ff;
+    color: #1c51b9;
+}
+
+.toast-popup-neutral-title {
+    color: #1e40af;
+}
