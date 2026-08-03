@@ -3,7 +3,6 @@ import { useState, useEffect, createElement } from "react";
 import clsx from "clsx";
 
 export default function ToastPopup(props) {
-  const [componentCSS, setComponentCSS] = useState({ display: "none" });
   const [classStr, setClassStr] = useState("");
   const [iconSVG, setIconSVG] = useState(null);
   const [title, setTitle] = useState("Biscuits!");
@@ -30,8 +29,6 @@ export default function ToastPopup(props) {
         ),
       );
 
-      setComponentCSS({ display: "flex" });
-
       setCount(5);
     }
   }, [props.properties]);
@@ -54,7 +51,6 @@ export default function ToastPopup(props) {
         `toast-popup-${classStr}`,
         count !== 0 && "toast-popup-display",
       )}
-      style={componentCSS}
     >
       {iconSVG}
       <div className="toast-popup-textarea">
