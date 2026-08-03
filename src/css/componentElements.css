@@ -371,4 +371,216 @@
 
 /* Utility Classes */
 
+.tooltip-bw-bold {
+    background-color: #262626;
+    color: #c7c7c7;
+}
+
+.tooltip-bw-bold-arrow {
+    border-top-color: #262626;
+}
+
+.tooltip-bw-bold-icon {
+    path {
+        stroke: #c7c7c7;
+    }
+}
+
+.tooltip-bw-bold-cross {
+    path {
+        stroke: #c7c7c7;
+        fill: #c7c7c7;
+    }
+}
+
+.tooltip-bw-bold-title {
+    color: #ffffff;
+}
+
+.tooltip-bw-light {
+    background-color: #ffffff;
+    color: #6b7280;
+}
+
+.tooltip-bw-light-arrow {
+    border-top-color: #ffffff;
+}
+
+.tooltip-bw-light-icon {
+    path {
+        stroke: #6b7280;
+    }
+}
+
+.tooltip-bw-light-cross {
+    path {
+        stroke: #6b7280;
+        fill: #6b7280;
+    }
+}
+
+.tooltip-bw-light-title {
+    color: #111827;
+}
+
+.tooltip-blue-bold {
+    background-color: #1e40af;
+    color: #e8edff;
+}
+
+.tooltip-blue-bold-arrow {
+    border-top-color: #1e40af;
+}
+
+.tooltip-blue-bold-icon {
+    path {
+        stroke: #7ea6f2;
+    }
+}
+
+.tooltip-blue-bold-title {
+    color: #ffffff;
+}
+
+.tooltip-blue-bold-cross {
+    path {
+        stroke: #d8d8d8;
+        fill: #d8d8d8;
+    }
+}
+
+.tooltip-blue-light {
+    background-color: #e0e7ff;
+    color: #1c51b9;
+}
+
+.tooltip-blue-light-arrow {
+    border-top-color: #e0e7ff;
+}
+
+.tooltip-blue-light-icon {
+    path {
+        stroke: #1c51b9;
+    }
+}
+
+.tooltip-blue-light-title {
+    color: #1e40af;
+}
+
+.tooltip-blue-light-cross {
+    path {
+        stroke: #1c51b9;
+        fill: #1c51b9;
+    }
+}
+
+/* --- */
+
+.tooltip-pinkpurple-bold {
+    background-color: #a9229b;
+    color: #ffe9fd;
+}
+
+.tooltip-pinkpurple-bold-arrow {
+    border-top-color: #a9229b;
+}
+
+.tooltip-pinkpurple-bold-icon {
+    path {
+        stroke: #f462e6;
+    }
+}
+
+.tooltip-pinkpurple-bold-title {
+    color: #ffffff;
+}
+
+.tooltip-pinkpurple-bold-cross {
+    path {
+        stroke: #d8d8d8;
+        fill: #d8d8d8;
+    }
+}
+
+.tooltip-pinkpurple-light {
+    background-color: #fff3fc;
+    color: #c7369e;
+}
+
+.tooltip-pinkpurple-light-arrow {
+    border-top-color: #fff3fc;
+}
+
+.tooltip-pinkpurple-light-icon {
+    path {
+        stroke: #c7369e;
+    }
+}
+
+.tooltip-pinkpurple-light-title {
+    color: #a9229b;
+}
+
+.tooltip-pinkpurple-light-cross {
+    path {
+        stroke: #c7369e;
+        fill: #c7369e;
+    }
+}
+
+/* --- */
+
+.tooltip-green-bold {
+    background-color: #47aa5d;
+    color: #e3ffe9;
+}
+
+.tooltip-green-bold-arrow {
+    border-top-color: #47aa5d;
+}
+
+.tooltip-green-bold-icon {
+    path {
+        stroke: #c1ffcf;
+    }
+}
+
+.tooltip-green-bold-title {
+    color: #ffffff;
+}
+
+.tooltip-green-bold-cross {
+    path {
+        stroke: #d8d8d8;
+        fill: #d8d8d8;
+    }
+}
+
+.tooltip-green-light {
+    background-color: #e7fff3;
+    color: #3c8c4e;
+}
+
+.tooltip-green-light-arrow {
+    border-top-color: #e7fff3;
+}
+
+.tooltip-green-light-icon {
+    path {
+        stroke: #41a557;
+    }
+}
+
+.tooltip-green-light-title {
+    color: #137a2a;
+}
+
+.tooltip-green-light-cross {
+    path {
+        stroke: #41a557;
+        fill: #41a557;
+    }
+}
+
 /* --- Toast Popups --- */

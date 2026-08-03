@@ -118,68 +118,76 @@ export const formObj = {
       {
         name: "Black & White",
         value: {
-          boldColors: {
-            bodyColor: "#262626",
-            iconColor: "#C7C7C7",
-            titleColor: "#FFFFFF",
-            textColor: "#C7C7C7",
+          boldClasses: {
+            bodyClass: "tooltip-bw-bold",
+            arrowClass: "tooltip-bw-bold-arrow",
+            iconClass: "tooltip-bw-bold-icon",
+            titleClass: "tooltip-bw-bold-title",
+            crossClass: "tooltip-bw-bold-cross",
           },
-          lightColors: {
-            bodyColor: "#FFFFFF",
-            iconColor: "#6B7280",
-            titleColor: "#111827",
-            textColor: "#6B7280",
+          lightClasses: {
+            bodyClass: "tooltip-bw-light",
+            arrowClass: "tooltip-bw-light-arrow",
+            iconClass: "tooltip-bw-light-icon",
+            titleClass: "tooltip-bw-light-title",
+            crossClass: "tooltip-bw-light-cross",
           },
         },
       },
       {
         name: "Blue",
         value: {
-          boldColors: {
-            bodyColor: "#1E40AF",
-            iconColor: "#7EA6F2",
-            titleColor: "#FFFFFF",
-            textColor: "#E8EDFF",
+          boldClasses: {
+            bodyClass: "tooltip-blue-bold",
+            arrowClass: "tooltip-blue-bold-arrow",
+            iconClass: "tooltip-blue-bold-icon",
+            titleClass: "tooltip-blue-bold-title",
+            crossClass: "tooltip-blue-bold-cross",
           },
-          lightColors: {
-            bodyColor: "#E0E7FF",
-            iconColor: "#1C51B9",
-            titleColor: "#1E40AF",
-            textColor: "#1C51B9",
+          lightClasses: {
+            bodyClass: "tooltip-blue-light",
+            arrowClass: "tooltip-blue-light-arrow",
+            iconClass: "tooltip-blue-light-icon",
+            titleClass: "tooltip-blue-light-title",
+            crossClass: "tooltip-blue-light-cross",
           },
         },
       },
       {
         name: "Pink & Purple",
         value: {
-          boldColors: {
-            bodyColor: "#A9229B",
-            iconColor: "#F462E6",
-            titleColor: "#FFFFFF",
-            textColor: "#FFE9FD",
+          boldClasses: {
+            bodyClass: "tooltip-pinkpurple-bold",
+            arrowClass: "tooltip-pinkpurple-bold-arrow",
+            iconClass: "tooltip-pinkpurple-bold-icon",
+            titleClass: "tooltip-pinkpurple-bold-title",
+            crossClass: "tooltip-pinkpurple-bold-cross",
           },
-          lightColors: {
-            bodyColor: "#FFF3FC",
-            iconColor: "#C7369E",
-            titleColor: "#A9229B",
-            textColor: "#C7369E",
+          lightClasses: {
+            bodyClass: "tooltip-pinkpurple-light",
+            arrowClass: "tooltip-pinkpurple-light-arrow",
+            iconClass: "tooltip-pinkpurple-light-icon",
+            titleClass: "tooltip-pinkpurple-light-title",
+            crossClass: "tooltip-pinkpurple-light-cross",
           },
         },
       },
       {
         name: "Green",
         value: {
-          boldColors: {
-            bodyColor: "#47AA5D",
-            iconColor: "#C1FFCF",
-            titleColor: "#FFFFFF",
-            textColor: "#E3FFE9",
+          boldClasses: {
+            bodyClass: "tooltip-green-bold",
+            arrowClass: "tooltip-green-bold-arrow",
+            iconClass: "tooltip-green-bold-icon",
+            titleClass: "tooltip-green-bold-title",
+            crossClass: "tooltip-green-bold-cross",
           },
-          lightColors: {
-            bodyColor: "#E7FFF3",
-            iconColor: "#41A557",
-            titleColor: "#137A2A",
-            textColor: "#3C8C4E",
+          lightClasses: {
+            bodyClass: "tooltip-green-light",
+            arrowClass: "tooltip-green-light-arrow",
+            iconClass: "tooltip-green-light-icon",
+            titleClass: "tooltip-green-light-title",
+            crossClass: "tooltip-green-light-cross",
           },
         },
       },
