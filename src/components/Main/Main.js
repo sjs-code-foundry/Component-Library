@@ -96,21 +96,24 @@ export default function Main(props) {
               labelText="Testimonial Message: "
               name="testimonial-message"
               multiLine={true}
-              placeholder="Required."
+              placeholder="Required. Max 192 chars."
+              limit={192}
               required={true}
             />
             <Form.Text
               labelText="Name: "
               name="testimonial-name"
               multiLine={false}
-              placeholder="Required."
+              placeholder="Required.  Max 36 chars."
+              limit={36}
               required={true}
             />
             <Form.Text
               labelText="Occupation: "
               name="testimonial-occupation"
               multiLine={false}
-              placeholder="Required."
+              placeholder="Required.  Max 36 chars."
+              limit={36}
               required={true}
             />
             <Form.Dropdown
