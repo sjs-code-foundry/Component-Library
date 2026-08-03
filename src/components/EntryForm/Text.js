@@ -14,8 +14,6 @@ export default function Text(props) {
 
   return (
     <div className="text-input">
-      {/* <p className="text-title">{props.labelText}</p>
-      <div className="text-list">Text Box Here</div>*/}
       <label name={props.name}>{props.labelText}</label>
 
       {props.multiLine ? (
@@ -25,6 +23,7 @@ export default function Text(props) {
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
           placeholder={props.placeholder}
+          maxlength={props.limit}
           required={props.required}
           onChange={handleChange}
         ></textarea>
@@ -35,6 +34,7 @@ export default function Text(props) {
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
           placeholder={props.placeholder}
+          maxlength={props.limit}
           required={props.required}
           onChange={handleChange}
         />

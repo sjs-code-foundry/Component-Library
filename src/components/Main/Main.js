@@ -136,14 +136,16 @@ export default function Main(props) {
               labelText="Tooltip Title: "
               name="tooltip-title"
               multiLine={false}
-              placeholder="Required."
+              placeholder="Required. Max 40 chars."
+              limit={40}
               required={true}
             />
             <Form.Text
               labelText="Tooltip Message: "
               name="tooltip-message"
               multiLine={true}
-              placeholder="Required."
+              placeholder="Required.  Max 80 chars."
+              limit={80}
               required={true}
             />
             <Form.Dropdown
