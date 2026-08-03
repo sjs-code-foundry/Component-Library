@@ -160,7 +160,11 @@ export default function Main(props) {
         );
         setRenderWindowElements(
           <div className="tooltip-target">
-            Hover over me to reveal tooltip.
+            {props.formSubmission ? (
+              <p>Hover over me to reveal tooltip.</p>
+            ) : (
+              <p>Generate a tooltip first.</p>
+            )}
             <Tooltip properties={props.formSubmission} />
           </div>,
         );
