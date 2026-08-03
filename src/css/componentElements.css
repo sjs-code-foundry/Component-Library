@@ -583,11 +583,6 @@
 /* --- Toast Popups --- */
 
 .toast-popup {
-    /* Temp */
-    background-color: black;
-    color: white;
-
-    /* Actual */
     /*display: flex;*/
     /* Display mode determined in component code */
     flex-direction: row;
@@ -627,6 +622,19 @@
 }
 
 /* --- Utility Classes - */
+
+.toast-popup-fadein {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .toast-popup-success {
     background-color: #ecfdf5;

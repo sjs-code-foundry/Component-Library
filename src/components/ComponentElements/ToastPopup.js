@@ -1,7 +1,7 @@
 import { useState, useEffect, createElement } from "react";
 
 export default function ToastPopup(props) {
-  const [componentCSS, setComponentCSS] = useState({ display: "flex" });
+  const [componentCSS, setComponentCSS] = useState({ display: "none" });
   const [classStr, setClassStr] = useState("");
   const [iconSVG, setIconSVG] = useState(null);
   const [title, setTitle] = useState("Biscuits!");
@@ -11,11 +11,10 @@ export default function ToastPopup(props) {
 
   useEffect(() => {
     if (props.properties) {
-      console.log(props.properties.get("toast-popup-title"));
-      console.log(props.properties.get("toast-popup-message"));
+      // console.log(props.properties.get("toast-popup-title"));
+      // console.log(props.properties.get("toast-popup-message"));
 
       const popupType = JSON.parse(props.properties.get("toast-popup-type"));
-      console.log(popupType);
 
       setClassStr(popupType.classStr);
 
@@ -32,7 +31,10 @@ export default function ToastPopup(props) {
   }, [props.properties]);
 
   return (
-    <div className={`toast-popup toast-popup-${classStr}`} style={componentCSS}>
+    <div
+      className={`toast-popup toast-popup-${classStr} toast-popup-fadein`}
+      style={componentCSS}
+    >
       {iconSVG}
       <div className="toast-popup-textarea">
         <h1 className={`toast-popup-${classStr}-title`}>{title}</h1>

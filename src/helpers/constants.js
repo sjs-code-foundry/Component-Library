@@ -202,9 +202,6 @@ export const formObj = {
       {
         name: "Success",
         value: {
-          bodyColor: "#ECFDF5",
-          titleColor: "#065F46",
-          textColor: "#047857",
           classStr: "success",
           iconProps: {
             width: "24",
@@ -225,9 +222,6 @@ export const formObj = {
       {
         name: "Warning",
         value: {
-          bodyColor: "#FFFBEB",
-          titleColor: "#92400E",
-          textColor: "#B45309",
           classStr: "warning",
           iconProps: {
             width: "24",
@@ -248,9 +242,6 @@ export const formObj = {
       {
         name: "Error",
         value: {
-          bodyColor: "#FEF2F2",
-          titleColor: "#92400E",
-          textColor: "#B45309",
           classStr: "error",
           iconProps: {
             width: "24",
@@ -271,9 +262,6 @@ export const formObj = {
       {
         name: "Neutral",
         value: {
-          bodyColor: "#EFF6FF",
-          titleColor: "#1E40AF",
-          textColor: "#1C51B9",
           classStr: "neutral",
           iconProps: {
             width: "24",
