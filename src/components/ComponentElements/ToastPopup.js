@@ -8,6 +8,8 @@ export default function ToastPopup(props) {
   const [message, setMessage] = useState(
     "as prose aisle flow made did way to his memory",
   );
+  const [count, setCount] = useState(5);
+  console.log(count);
 
   useEffect(() => {
     if (props.properties) {
@@ -27,8 +29,24 @@ export default function ToastPopup(props) {
       );
 
       setComponentCSS({ display: "flex" });
+
+      setCount(5);
     }
   }, [props.properties]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCount((prevCount) => prevCount - 1);
+    }, 1000);
+
+    if (count === 0) {
+      clearTimeout(timer);
+      console.log("Timer finished.");
+      // Remove fadein class
+      // Add fadeout class to div
+    }
+    return () => clearTimeout(timer);
+  });
 
   return (
     <div
