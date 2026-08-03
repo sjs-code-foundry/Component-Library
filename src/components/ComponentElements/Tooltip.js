@@ -12,9 +12,14 @@ export default function Tooltip(props) {
   const [iconClass, setIconClass] = useState(null);
   const [titleClass, setTitleClass] = useState(null);
   const [crossClass, setCrossClass] = useState(null);
+  const [title, setTitle] = useState(null);
+  const [message, setMessage] = useState(null);
 
   useEffect(() => {
     if (props.properties) {
+      setTitle(props.properties.get("tooltip-title"));
+      setMessage(props.properties.get("tooltip-message"));
+
       const isBoldStyle = /true/.test(props.properties.get("tooltip-style"));
       const colorClasses = JSON.parse(props.properties.get("tooltip-color"));
       let classObj;
@@ -42,11 +47,8 @@ export default function Tooltip(props) {
     <div className={clsx("tooltip", bodyClass)} style={componentCSS}>
       <TooltipIcon classNames={clsx("tooltip-icon", iconClass)} />
       <div className="tooltip-text-area">
-        <h1 className={titleClass}>Tooltip Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum
-          tenetur.
-        </p>
+        <h1 className={titleClass}>{title}</h1>
+        <p>{message}</p>
       </div>
       <button
         className={clsx("tooltip-close-btn", bodyClass)}
