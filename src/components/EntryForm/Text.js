@@ -23,7 +23,7 @@ export default function Text(props) {
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
           placeholder={props.placeholder}
-          maxlength={props.limit}
+          maxLength={props.limit}
           required={props.required}
           onChange={handleChange}
         ></textarea>
@@ -34,7 +34,7 @@ export default function Text(props) {
           className={`${dark ? "dark" : "light"}-accent`}
           value={input}
           placeholder={props.placeholder}
-          maxlength={props.limit}
+          maxLength={props.limit}
           required={props.required}
           onChange={handleChange}
         />
