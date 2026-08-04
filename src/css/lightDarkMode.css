@@ -78,7 +78,7 @@ input[type="radio"] {
     place-content: center;
 
     appearance: none;
-    background-color: var(--color-radio-bg);
+    background-color: var(--color-light-bg);
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -95,7 +95,11 @@ input[type="radio"]::before {
     border-radius: 50%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--color-radio-dot);
+    box-shadow: inset 1em 1em var(--color-light-accent-bg);
+}
+
+input[type="radio"].dark-accent::before {
+    box-shadow: inset 1em 1em var(--color-dark-accent-bg);
 }
 
 input[type="radio"]:checked::before {

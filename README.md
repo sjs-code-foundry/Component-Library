@@ -26,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Finishing Touches
 - [x] Format entry forms properly (remove border and see what looks right)
 - [x] Format buttons (make sure they work for mobile as well as for desktop)
-- [ ] Format radio buttons so that color of selection matches current mode
+- [x] Format radio buttons so that color of selection matches current mode
 
 ## Available Scripts
 
