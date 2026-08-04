@@ -106,9 +106,12 @@ header > button:active {
 /* --- Entry Forms --- */
 
 section.entry-form {
+    display: flex;
+    justify-content: center;
+
     margin: 1em auto;
 
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 
 section.entry-form > form {
@@ -118,11 +121,18 @@ section.entry-form > form {
     justify-content: space-around;
 
     padding: 2em 0;
+    width: 50%;
+}
+
+section.entry-form > form > div {
+    width: 100%;
 }
 
 section.entry-form > form > div > label {
     margin-top: 1em;
     margin-bottom: 0.4em;
+
+    min-width: 100%;
 
     font-size: 110%;
 }
@@ -136,7 +146,7 @@ div.text-input {
 
 div.text-input > input,
 div.text-input > textarea {
-    min-width: 30em;
+    min-width: 100%;
     min-height: 2em;
 
     padding: 1em;
@@ -157,6 +167,8 @@ div.dropdown {
 }
 
 .select {
+    min-width: 100%;
+
     padding: 1em;
     border: none;
     border-radius: 1em;
@@ -179,6 +191,9 @@ div.dropdown {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    width: 20%;
+    margin: 0 auto;
 }
 
 input[type="file"] {
@@ -197,10 +212,10 @@ div.image-upload > label {
 }
 
 section.entry-form > form > button {
-    margin-top: 2em;
-    padding: 0.5em 1em;
+    margin-top: 1.5em;
+    padding: 0.5em 3em;
 
-    font-size: 110%;
+    font-size: 150%;
     font-weight: bold;
 
     border: none;
