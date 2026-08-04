@@ -11,5 +11,5 @@ export default function useEffectOnUpdate(effectFunc, runOnStart, depsArr) {
     } else {
       effectFunc();
     }
-  }, depsArr);
+  }, [effectFunc, runOnStart, depsArr]);
 }

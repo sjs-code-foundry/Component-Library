@@ -1,7 +1,5 @@
 import { useState, useContext } from "react";
 
-import clsx from "clsx";
-
 import { LightDarkContext } from "../../App";
 
 export default function Radios(props) {
